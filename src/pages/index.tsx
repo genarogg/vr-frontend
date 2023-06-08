@@ -1,10 +1,9 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import Img from "../components/nano/Img"
 import A from "../components/nano/A"
 import consultas from "../consultas/Consultas"
 
 import videoCuentaRegresiva from "../img/home/video/CUENTA-REGRESIVA.mp4"
-
 
 import "../css/style.scss"
 import Section from "../components/general/Section"
@@ -13,6 +12,12 @@ interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
   console.log(consultas().logoHome)
+
+  useEffect(() => {
+    //@ts-ignore
+    document.querySelector("#cuentaRegresiva video").play()
+  }, [])
+
   return (
     <>
       <div className="containerAll">
@@ -64,9 +69,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
           id="cuentaRegresiva"
           css="cuenta-regresiva"
           title="YA ESTAMOS EN CUENTA REGRESIVA"
-
         >
-
           <video src={videoCuentaRegresiva} autoPlay controls loop></video>
         </Section>
       </div>
