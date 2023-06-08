@@ -16,6 +16,16 @@ const Home: React.FunctionComponent<HomeProps> = () => {
   useEffect(() => {
     //@ts-ignore
     document.querySelector("#cuentaRegresiva video").play()
+
+    const video = document.getElementById("cuentaRegresivaVideo")
+    video
+      .play()
+      .then(() => {
+        console.log("El video se ha iniciado correctamente")
+      })
+      .catch(error => {
+        console.error("Se ha producido un error al iniciar el video:", error)
+      })
   }, [])
 
   return (
@@ -70,7 +80,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
           css="cuenta-regresiva"
           title="YA ESTAMOS EN CUENTA REGRESIVA"
         >
-          <video src={videoCuentaRegresiva} autoPlay controls loop></video>
+          <video src={videoCuentaRegresiva} autoPlay controls loop id="cuentaRegresivaVideo"></video>
         </Section>
       </div>
     </>
