@@ -4,14 +4,23 @@
   box-sizing: border-box;
 }
 
+.ico {
+  color: #fff;
+}
+
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* @mixin centerX {
+}
+ */
 body {
   font-family: Lato;
+  background-color: #070b20;
+  color: #fff;
 }
 
 header {
@@ -98,6 +107,142 @@ header {
         outline: 0 !important;
         color: #fff;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.sections {
+  padding: 20px 0;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /*   overflow: hidden; */
+
+  h2 {
+    text-align: center;
+    margin: 32px 0 42px 0;
+    font-size: 50px;
+  }
+
+  video#cuentaRegresivaVideo {
+    width: 1280px;
+    border-radius: 15px;
+  }
+
+  p {
+    max-width: 1120px;
+    font-weight: 400;
+    /* font-size: 16px; */
+    text-align: justify;
+    line-height: 28px;
+    font-size: 18px;
+  }
+
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    margin: 60px 0 0 0;
+    video {
+      width: 360px;
+      display: flex;
+      justify-content: center;
+      border-radius: 15px;
+    }
+  }
+
+  /* slider */
+  &.pistas {
+    display: block;
+
+    /*  *{transition: 600ms all ease;} */
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+    /* h2 {
+      margin: 0 0 42px 0;
+    } */
+
+    .swiper {
+      width: 100%;
+      margin: 60px 0 0 0;
+
+      .gatsby-image-wrapper-constrained {
+        border-radius: 20px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+      }
+      .sliderContariner {
+        width: 380px;
+      }
+
+      /*  img {
+       
+      } */
+    }
+  }
+
+  .containerPit {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 120px;
+    .caracteristica {
+      max-width: 360px;
+
+      .ico {
+        @include center();
+        font-size: 32px;
+        margin: 20px;
+
+        /*  &.icon-alert{
+          font-size: 64px;
+        } */
+      }
+
+      h2 {
+        font-size: 24px;
+        margin: 24px;
+      }
+    }
+  }
+
+  &.pit {
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #282828;
+  margin-top: 20px;
+  padding: 15px 0;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      a {
+        font-size: 24px;
+        padding: 18px;
+        display: flex;
+        text-decoration: none;
       }
     }
   }

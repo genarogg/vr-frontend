@@ -4,18 +4,23 @@ export interface VideoProps {
   css?: string
   id?: string
   src: string
+  play?: boolean
 }
 
 const Video: React.FunctionComponent<VideoProps> = ({
   css = "",
   id = "",
   src,
+  play = false,
 }) => {
   useEffect(() => {
     const video = document.getElementById(id)!
 
     //@ts-ignore
-    video.play().then(() => {
+    video
+      //@ts-ignore
+      .play()
+      .then(() => {
         console.log("El video se ha iniciado correctamente")
       })
       .catch(error => {
@@ -23,7 +28,7 @@ const Video: React.FunctionComponent<VideoProps> = ({
       })
   }, [])
 
-  return <video src={src} id={id} controls loop autoPlay></video>
+  return <video src={src} id={id} controls loop autoPlay={play}></video>
 }
 
 export default Video
