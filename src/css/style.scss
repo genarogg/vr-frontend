@@ -30,7 +30,8 @@ header {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 6fr;
-  background-color: #5331d9;
+  background-color: rgba(#5331d9, 0.4);
+  backdrop-filter: blur(20px);
 
   nav {
     /*   display: flex;
