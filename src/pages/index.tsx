@@ -130,9 +130,15 @@ const Home: React.FunctionComponent<HomeProps> = () => {
             slidesPerView={4}
             grabCursor={true}
             loop
+            effect='fade'
+            speed={3000}
             spaceBetween={0}
             pagination={{
               clickable: true,
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false
             }}
             modules={[Autoplay]}
             className="mySwiper"
