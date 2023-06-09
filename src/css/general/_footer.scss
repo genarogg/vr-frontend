@@ -1,0 +1,25 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #282828;
+  margin-top: 20px;
+  padding: 15px 0;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      a {
+        font-size: 24px;
+        padding: 18px;
+        display: flex;
+        text-decoration: none;
+      }
+    }
+  }
+}

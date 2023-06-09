@@ -1,0 +1,50 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  background-color: rgba(#5331d9, 0.4);
+  backdrop-filter: blur(20px);
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    ul {
+      gap: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+
+      li {
+        list-style: none;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          background-color: transparent;
+          border: none;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          outline: 0 !important;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        &:last-child {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    @include center();
+  }
+}

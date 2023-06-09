@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ico {
+  color: #fff;
+}
+
+body {
+  font-family: Lato;
+  background-color: #070b20;
+  color: #fff;
+}
+
+@import "mixin";
+@import "header";
+@import "footer";
