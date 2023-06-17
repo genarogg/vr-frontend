@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?do3cam');
-  src:  url('fonts/icomoon.eot?do3cam#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?do3cam') format('truetype'),
-    url('fonts/icomoon.woff?do3cam') format('woff'),
-    url('fonts/icomoon.svg?do3cam#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?i7qkmd');
+  src:  url('fonts/icomoon.eot?i7qkmd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?i7qkmd') format('truetype'),
+    url('fonts/icomoon.woff?i7qkmd') format('woff'),
+    url('fonts/icomoon.svg?i7qkmd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-electric_car:before {
+  content: "\e90b";
+}
+.icon-auto_fix_high:before {
+  content: "\e90c";
+}
+.icon-monitor:before {
+  content: "\e901";
+}
+.icon-flash:before {
+  content: "\e90e";
+}
+.icon-game-controller:before {
+  content: "\e904";
+}
+.icon-home:before {
+  content: "\e905";
+}
+.icon-palette:before {
+  content: "\e906";
+}
+.icon-round-brush:before {
+  content: "\e907";
+}
+.icon-text-document-inverted:before {
+  content: "\e908";
+}
+.icon-tv:before {
+  content: "\e909";
+}
 .icon-notice:before {
   content: "\e900";
-}
-.icon-instagram:before {
-  content: "\e903";
-}
-.icon-download:before {
-  content: "\e902";
 }
 .icon-envelop:before {
   content: "\e945";
@@ -45,4 +69,22 @@
 }
 .icon-twitter:before {
   content: "\ea96";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-shield:before {
+  content: "\e9b4";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-download:before {
+  content: "\e902";
+}
+.icon-history:before {
+  content: "\e90d";
+}
+.icon-automobile:before {
+  content: "\e90a";
 }
