@@ -18,6 +18,16 @@ const Consultas = () => {
     nftBg,
     nftSel,
     nftArt,
+    vueltarapida,
+    cap1,
+    cap2,
+    cap3,
+
+    escuderia1,
+    escuderia2,
+    escuderia3,
+    escuderia4,
+    escuderia5,
   } = useStaticQuery(graphql`
     query {
       background: file(
@@ -175,7 +185,6 @@ const Consultas = () => {
             placeholder: BLURRED
             formats: WEBP
             quality: 100
-
           )
         }
       }
@@ -188,6 +197,53 @@ const Consultas = () => {
             formats: WEBP
             quality: 100
           )
+        }
+      }
+
+      vueltarapida: file(relativePath: { eq: "whitepaper/vueltarapida.png" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      cap1: file(relativePath: { eq: "whitepaper/cap1.png" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      cap2: file(relativePath: { eq: "whitepaper/cap2.png" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      cap3: file(relativePath: { eq: "whitepaper/cap3.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+
+      escuderia1: file(relativePath: { eq: "whitepaper/escuderia1.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      escuderia2: file(relativePath: { eq: "whitepaper/escuderia2.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      escuderia3: file(relativePath: { eq: "whitepaper/escuderia3.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      escuderia4: file(relativePath: { eq: "whitepaper/escuderia4.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+        }
+      }
+      escuderia5: file(relativePath: { eq: "whitepaper/escuderia5.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
         }
       }
     }
@@ -214,6 +270,15 @@ const Consultas = () => {
     nftBg: nftBg.sharp,
     nftSel: nftSel.sharp,
     nftArt: nftArt.sharp,
+    vueltarapida,
+    cap1,
+    cap2,
+    cap3,
+    escuderia1,
+    escuderia2,
+    escuderia3,
+    escuderia4,
+    escuderia5,
   }
 
   return data

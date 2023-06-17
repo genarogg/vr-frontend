@@ -71,6 +71,7 @@
       border-radius: 10px;
       max-width: 850px;
       min-height: 60vh;
+      width: 100%;
 
       h2 {
         font-size: 36px;
@@ -79,6 +80,51 @@
 
       p {
         margin-bottom: 10px;
+      }
+
+      .containerImg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+        img {
+        }
+      }
+
+      b {
+        display: block;
+        margin-bottom: 20px;
+      }
+      h3 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border-width: 1px 0 0 1px;
+        margin: 0 0 1.5em;
+        width: 100%;
+        border: 1px solid rgba(#fff, 0.5);
+        b {
+          display: initial;
+        }
+
+        td,
+        th {
+          padding: 8px;
+          border-width: 0 1px 1px 0;
+          border: 1px solid rgba(#fff, 0.5);
+        }
+      }
+
+      nav {
+        ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        }
       }
     }
   }
