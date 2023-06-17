@@ -1,9 +1,17 @@
-footer {
+.footer {
+  align-self: flex-end;
+  background: #000011;
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: #282828;
-  margin-top: 20px;
+  background-color: #010101;
+  /* margin-top: 20px; */
   padding: 15px 0;
+  
   p {
     display: flex;
     justify-content: center;

@@ -1,13 +1,13 @@
 import React from "react"
-import A from "../../nano/A"
-import Img from "../../nano/Img"
-import consultas from "../../../consultas"
+import A from "../nano/A"
+import Img from "../nano/Img"
+import consultas from "../../consultas"
 
 interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
   return (
-    <header>
+    <header className="header" id="header">
       <div className="logo">
         <A to="/">
           <Img src={consultas().logo} />

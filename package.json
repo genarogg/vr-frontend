@@ -8,8 +8,12 @@
     "gatsby": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
+    "gatsby-plugin-offline": "^6.11.0",
+    "gatsby-plugin-remove-console": "^0.0.2",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-sharp": "^5.10.0",
     "react": "^18.2.0",
@@ -32,7 +36,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "dev": "gatsby clean && gatsby develop"
   },
   "repository": {
     "type": "git",

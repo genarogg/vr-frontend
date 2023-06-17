@@ -1,4 +1,11 @@
-header {
+.header {
+  align-self: flex-start;
+  background: #000011;
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+
   position: fixed;
   top: 0;
   z-index: 10000;

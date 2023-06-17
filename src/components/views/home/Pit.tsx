@@ -1,6 +1,6 @@
 import React from "react"
 import consultas from "../../../consultas"
-import Section from "../../general/Section"
+import Section from "./Section"
 import Icono from "../../nano/Icono"
 import Img from "../../nano/Img"
 

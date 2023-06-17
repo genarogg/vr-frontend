@@ -3,9 +3,8 @@ import CuentaRegresiva from "./CuentaRegresiva"
 import Pistas from "./Pistas"
 import Pit from "./Pit"
 import Vehiculos from "./Vehiculos"
-import Welcome from "./welcome"
-import Layout from "../../general/layoud"
-
+import Welcome from "./Welcome"
+import Layout from "../../layout"
 
 interface HomeProps {}
 

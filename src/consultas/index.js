@@ -15,6 +15,9 @@ const Consultas = () => {
     pista7,
     pista8,
     pit,
+    nftBg,
+    nftSel,
+    nftArt,
   } = useStaticQuery(graphql`
     query {
       background: file(
@@ -153,6 +156,39 @@ const Consultas = () => {
           )
         }
       }
+      nftBg: file(relativePath: { eq: "nfts/nfts.jpg" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(
+            width: 1920
+            placeholder: BLURRED
+            formats: WEBP
+            quality: 90
+          )
+        }
+      }
+
+      nftSel: file(relativePath: { eq: "nfts/nft-sel.png" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(
+            width: 500
+            height: 500
+            placeholder: BLURRED
+            formats: WEBP
+            quality: 90
+          )
+        }
+      }
+      nftArt: file(relativePath: { eq: "nfts/nft-art.png" }) {
+        sharp: childImageSharp {
+          gatsbyImageData(
+            width: 500
+            height: 500
+            placeholder: BLURRED
+            formats: WEBP
+            quality: 90
+          )
+        }
+      }
     }
   `)
 
@@ -174,6 +210,9 @@ const Consultas = () => {
     bandera: bandera.sharp,
     mapas,
     pit: pit.sharp,
+    nftBg: nftBg.sharp,
+    nftSel: nftSel.sharp,
+    nftArt: nftArt.sharp,
   }
 
   return data

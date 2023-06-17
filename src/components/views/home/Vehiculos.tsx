@@ -1,5 +1,5 @@
 import React from "react"
-import Section from "../../general/Section"
+import Section from "./Section"
 import Video from "../../nano/Video"
 
 //@ts-ignore

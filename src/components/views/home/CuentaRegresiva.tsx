@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react"
 //@ts-ignore
 import videoCuentaRegresiva from "../../../img/home/video/CUENTA-REGRESIVA.mp4"
 import Video from "../../nano/Video"
-import Section from "../../general/Section"
+import Section from "./Section"
 
 interface CuentaRegresivaProps {}
 
