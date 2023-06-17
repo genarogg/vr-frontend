@@ -174,7 +174,8 @@ const Consultas = () => {
             height: 500
             placeholder: BLURRED
             formats: WEBP
-            quality: 90
+            quality: 100
+
           )
         }
       }
@@ -185,7 +186,7 @@ const Consultas = () => {
             height: 500
             placeholder: BLURRED
             formats: WEBP
-            quality: 90
+            quality: 100
           )
         }
       }

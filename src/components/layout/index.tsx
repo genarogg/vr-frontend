@@ -5,12 +5,17 @@ import Header from "./Header"
 import Footer from "./Footer"
 interface LayoutProps {
   children?: any
+  headerNofixed?: boolean
 }
 
-const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
+const Layout: React.FunctionComponent<LayoutProps> = ({
+  children,
+  headerNofixed = false,
+}) => {
   return (
     <>
       <Header />
+      {headerNofixed ? <div className="headerNoFixed"></div> : null}
       <main id="main" className="main">
         {children}
       </main>

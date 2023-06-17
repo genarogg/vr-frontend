@@ -5,3 +5,63 @@
 @import "./layout/layout";
 @import "./theme/dark";
 @import "./home/home";
+
+.nft {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  display: grid;
+
+  justify-items: center;
+
+  /*  gap: 60px; */
+  .container-info-nfts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    justify-items: center;
+    grid-gap: 40px;
+
+    border: 1px solid rgba($colorButton, 0.8);
+    padding: 30px;
+    background-color: rgba($colorButton, 0.4);
+    border-radius: 10px;
+    margin-bottom: 60px;
+
+    &:nth-child(odd) {
+      .text {
+        order: 2;
+      }
+      img {
+        order: 1;
+      }
+    }
+
+    .text {
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    img {
+      object-fit: contain !important;
+    }
+  }
+
+  .contaienerRarible {
+    margin-bottom: 60px;
+
+    a {
+      background-color: $colorButton;
+      padding: 10px;
+      border-radius: 15px;
+      text-decoration: none;
+    }
+  }
+}

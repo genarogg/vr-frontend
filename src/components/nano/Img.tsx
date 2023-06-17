@@ -39,10 +39,11 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
           id={id}
           className={css}
           style={{
-            position: "absolute",
+            position: "fixed",
             zIndex: "-10000",
             maxHeight: "100%",
             maxWidth: "100%",
+            height:"100%",
             top: "0",
             left: "0",
           }}
