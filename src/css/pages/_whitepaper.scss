@@ -1,0 +1,127 @@
+
+
+.whitepaper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+    display: grid;
+  
+    justify-items: center;
+  
+    /*  gap: 60px; */
+  
+    .infoPaper {
+      display: grid;
+      grid-template-columns: 1fr 8fr;
+      width: 70%;
+      justify-items: center;
+      /* grid-gap: 40px; */
+  
+      padding: 30px;
+  
+      margin-bottom: 60px;
+  
+      aside {
+        border: 1px solid rgba($colorButton, 0.8);
+        background-color: rgba($colorButton, 0.4);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        width: 260px;
+        border-radius: 10px;
+        max-height: 365px;
+  
+        nav {
+          ul li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              /*   padding: 10px; */
+              margin-bottom: 17px;
+              display: inline-block;
+              background-color: transparent;
+              border: none;
+              color: rgb(255, 255, 255);
+              font-size: 12px;
+              font-weight: 700;
+              letter-spacing: 1px;
+              text-decoration: none;
+              text-transform: uppercase;
+              outline: 0px !important;
+  
+              span {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      .containerInfo {
+        border: 1px solid rgba($colorButton, 0.8);
+        background-color: rgba($colorButton, 0.4);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 850px;
+        min-height: 60vh;
+        width: 100%;
+  
+        h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+  
+        p {
+          margin-bottom: 15px;
+        }
+  
+        .containerImg {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 20px;
+          img {
+          }
+        }
+  
+        b {
+          display: block;
+          margin-bottom: 15px;
+        }
+        h3 {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        table {
+          border-collapse: separate;
+          border-spacing: 0;
+          border-width: 1px 0 0 1px;
+          margin: 0 0 1.5em;
+          width: 100%;
+          border: 1px solid rgba(#fff, 0.5);
+          b {
+            display: initial;
+            
+          }
+  
+          td,
+          th {
+            padding: 8px;
+            border-width: 0 1px 1px 0;
+            border: 1px solid rgba(#fff, 0.5);
+          }
+        }
+  
+        nav {
+          ul li {
+          list-style: none;
+          margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  

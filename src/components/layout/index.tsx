@@ -26,7 +26,18 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 
 export function Head() {
   return (
-    <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon" />
+    <>
+      {" "}
+      <link
+        rel="shortcut icon"
+        href="/src/img/favicon.png"
+        type="image/x-icon"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </>
   )
 }
 

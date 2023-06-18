@@ -22,7 +22,6 @@ const Consultas = () => {
     cap1,
     cap2,
     cap3,
-
     escuderia1,
     escuderia2,
     escuderia3,
@@ -58,11 +57,14 @@ const Consultas = () => {
       logo: file(relativePath: { eq: "home/logo.png" }) {
         sharp: childImageSharp {
           gatsbyImageData(
-            width: 130
+            width: 250
             quality: 100
             placeholder: BLURRED
             formats: WEBP
           )
+          original {
+            src
+          }
         }
       }
 
@@ -200,7 +202,7 @@ const Consultas = () => {
         }
       }
 
-      vueltarapida: file(relativePath: { eq: "whitepaper/vueltarapida.png" }) {
+      vueltarapida: file(relativePath: { eq: "whitepaper/vueltarapida.jpg" }) {
         sharp: childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: WEBP)
         }
@@ -264,6 +266,7 @@ const Consultas = () => {
     background: background.sharp,
     logoHome: logoHome.sharp,
     logo: logo.sharp,
+    logoOriginal: logo.sharp.original.src,
     bandera: bandera.sharp,
     mapas,
     pit: pit.sharp,

@@ -15,6 +15,10 @@
   background-color: rgba(#5331d9, 0.4);
   backdrop-filter: blur(20px);
 
+  .gatsby-image-wrapper {
+    max-width: 150px;
+  }
+
   nav {
     width: 100%;
     display: flex;

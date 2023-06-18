@@ -3,6 +3,8 @@ import A from "../nano/A"
 import Img from "../nano/Img"
 import consultas from "../../consultas"
 
+
+
 interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
@@ -11,28 +13,30 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       <div className="logo">
         <A to="/">
           <Img src={consultas().logo} />
+          {/* {console.log(consultas().logoOriginal)} */}
+          {/* <img src={consultas().logoOriginal}  alt="" /> */}
         </A>
       </div>
       <nav>
         <ul>
           <li>
-            <A to="#">Inicio</A>
+            <A to="/">Inicio</A>
           </li>
           <li>
-            <A to="#">NFTs</A>
+            <A to="/nfts">NFTs</A>
           </li>
           <li>
-            <A to="#">DSP</A>
+            <A to="/dsp">DSP</A>
           </li>
           <li>
-            <A to="#">Whitepaper</A>
+            <A to="/whitepaper">Whitepaper</A>
           </li>
           <li>
-            <A to="#">Desincryp</A>
+            <A to="https://desincryp.com/" type="a" >Desincryp</A>
           </li>
-          <li>
+         {/*  <li>
             <A to="#">Idioma</A>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
