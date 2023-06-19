@@ -69,7 +69,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           abrirMenu()
         }}
       >
-        <Icono css="icon-envelop"></Icono>
+        <Icono css="icon-menu"></Icono>
       </button>
 
       {navegacion("nav-movile", "navMovile")}

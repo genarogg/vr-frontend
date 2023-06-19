@@ -47,6 +47,21 @@ const Pistas: React.FunctionComponent<PistasProps> = () => {
           delay: 2000,
           disableOnInteraction: false,
         }}
+        breakpoints={{
+          1500: {
+            slidesPerView: 4,
+          },
+
+          900: {
+            slidesPerView: 3,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          1: {
+            slidesPerView: 1,
+          },
+        }}
         modules={[Autoplay]}
         className="mySwiper"
       >
