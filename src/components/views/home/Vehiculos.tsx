@@ -7,6 +7,9 @@ import videoCuentaRegresiva from "../../../img/home/video/CUENTA-REGRESIVA.mp4"
 
 interface VehiculosProps {}
 
+const widthVideo = 360
+const heightVideo = 202
+
 const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
   return (
     <Section id="vehiculos" css="vehiculos" title="Vehiculos">
@@ -24,10 +27,54 @@ const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
       </p>
 
       <div className="videos">
-        <Video src={videoCuentaRegresiva} id="video1" play={false}></Video>
-        <Video src={videoCuentaRegresiva} id="video2" play={false}></Video>
+        {/* <Video src={videoCuentaRegresiva} id="video1" play={false}></Video> */}
+        <div className="videoContainer">
+          <iframe
+            width={widthVideo}
+            height={heightVideo}
+            src="https://www.youtube.com/embed/Hs5aTKwfA_8"
+            title="JERICO"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="videoContainer">
+          <iframe
+            width={widthVideo}
+            height={heightVideo}
+            src="https://www.youtube.com/embed/cIzv8GeH95o"
+            title="SUV EROS"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="videoContainer">
+          <iframe
+            width={widthVideo}
+            height={heightVideo}
+            src="https://www.youtube.com/embed/pjSvbr1B0sc"
+            title="SPARTA"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="videoContainer">
+          <iframe
+            width={widthVideo}
+            height={heightVideo}
+            src="https://www.youtube.com/embed/PkD-dQp9HtE"
+            title="Grigora"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+        {/*    <Video src={videoCuentaRegresiva} id="video2" play={false}></Video>
         <Video src={videoCuentaRegresiva} id="video3" play={false}></Video>
-        <Video src={videoCuentaRegresiva} id="video4" play={false}></Video>
+        <Video src={videoCuentaRegresiva} id="video4" play={false}></Video> */}
       </div>
     </Section>
   )

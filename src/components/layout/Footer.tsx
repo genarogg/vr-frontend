@@ -11,22 +11,25 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
       <p>Copyright © 2023 vueltarapida.net</p>
       <ul>
         <li>
-          <A to="#">
+          <A
+            to="https://instagram.com/vuelatrapidagame?igshid=YmMyMTA2M2Y="
+            type="a"
+          >
             <Icono css="icon-instagram"></Icono>
           </A>
         </li>
         <li>
-          <A to="#">
+          <A to="https://twitter.com/vueltarapidagam" type="a">
             <Icono css="icon-twitter"></Icono>
           </A>
         </li>
         <li>
-          <A to="#">
+          <A to="mailto:contactogame@vueltarapida.net" type="a">
             <Icono css="icon-envelop"></Icono>
           </A>
         </li>
         <li>
-          <A to="#">
+          <A to="https://t.me/vueltarapid" type="a">
             <Icono css="icon-telegram"></Icono>
           </A>
         </li>

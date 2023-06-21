@@ -29,6 +29,7 @@ const A: React.FunctionComponent<AProps> = ({
       </a>
     )
   }
+
   return (
     <Link to={to} id={id} className={css}>
       {children}
