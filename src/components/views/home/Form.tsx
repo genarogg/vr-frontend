@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import $ from "../../../functions/$"
+import A from "../../nano/A"
 
 interface FromProps {}
 
@@ -86,13 +87,12 @@ const From: React.FunctionComponent<FromProps> = () => {
               enviarRegistro(e)
             }}
           >
-            <a href="#">
+            <A to="#"> <span></span>
               <span></span>
               <span></span>
               <span></span>
-              <span></span>
-              Descargar Juego
-            </a>
+              Descargar Juego</A>
+         
           </button>
         </form>
       </div>
