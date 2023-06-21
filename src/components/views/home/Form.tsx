@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import $ from "../../../functions/$"
 
 interface FromProps {}
 
@@ -29,75 +30,70 @@ const From: React.FunctionComponent<FromProps> = () => {
   }
   return (
     <>
-      {/* <form id="formRegister">
-        <div className="input" id="containerName">
-          <label htmlFor="name2">
-            <span className="ico icon-user"></span>
-          </label>
-          <input type="text" id="name2" placeholder="nombre" />
-        </div>
-
-        <div className="input" id="containerEmail">
-          <label htmlFor="email">
-            <span className="ico icon-mail"></span>
-          </label>
-          <input type="email" id="email" placeholder="email" />
-        </div>
-
-        <fieldset>
-          <legend>sexo</legend>
-          <div>
-            <div className="radioGrup">
-              <input
-                type="radio"
-                id="contactChoice1"
-                name="sexo"
-                value="Hombre"
-                checked
-              />
-              <label htmlFor="contactChoice1">Hombre</label>
-            </div>
-            <div className="radioGrup">
-              <input
-                type="radio"
-                id="contactChoice2"
-                name="sexo"
-                value="Mujer"
-              />
-              <label htmlFor="contactChoice2">Mujer</label>
-            </div>
-          </div>
-        </fieldset>
-        <button
-          id="btnSubmit"
-          className="btnSubmit"
-          onClick={e => {
-            enviarRegistro(e)
-          }}
-        >
-          Descargar Juego
-        </button>
-      </form> */}
+      
 
       <div className="login-box">
-        <h2>Login</h2>
+        {/* <h2>Login</h2> */}
         <form>
-          <div className="user-box">
-            <input type="text" name="" required />
+          <div className="user-box input" id="containerName">
+            <span className="ico icon-user"></span>
+            <input type="text" id="name2" required />
+            <label>nombre</label>
+          </div>
 
-            <label>Username</label>
+          <div className="user-box input" id="containerEmail">
+            <span className="ico icon-mail"></span>
+            <input type="email" name="" id="email" required />
+
+            <label>Email</label>
           </div>
-          <div className="user-box">
-            <input type="password" name="" required />
-            <label>Password</label>
-          </div>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
+
+          <fieldset>
+            <ul>
+              <li>
+                {" "}
+                <input
+                  type="radio"
+                  /* id="contactChoice1" */
+                  name="sexo"
+                  value="Hombre"
+                  id="f-option"
+                />
+                <div className="check"></div>
+                <label htmlFor="f-option">Hombre</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  /* id="contactChoice2" */
+                  name="sexo"
+                  value="Mujer"
+                  id="s-option"
+                />
+                <div className="check">
+                  {/* <div className="inside"></div >*/}
+                </div>
+                {/*  */}
+                <label htmlFor="s-option">Mujer</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button
+            id="btnSubmit"
+            className="btnSubmit"
+            onClick={e => {
+              enviarRegistro(e)
+            }}
+          >
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Descargar Juego
+            </a>
+          </button>
         </form>
       </div>
     </>

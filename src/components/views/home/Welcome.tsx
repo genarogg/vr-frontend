@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import consultas from "../../../consultas"
 import A from "../../nano/A"
 import Img from "../../nano/Img"
-import $, { $toggle } from "../../../functions/$"
+import  { $toggle } from "../../../functions/$"
 import Form from "./Form"
 
 interface WelcomeProps {}
