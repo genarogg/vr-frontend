@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?wjjb2o');
-  src:  url('fonts/icomoon.eot?wjjb2o#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?wjjb2o') format('truetype'),
-    url('fonts/icomoon.woff?wjjb2o') format('woff'),
-    url('fonts/icomoon.svg?wjjb2o#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?t4meip');
+  src:  url('fonts/icomoon.eot?t4meip#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?t4meip') format('truetype'),
+    url('fonts/icomoon.woff?t4meip') format('woff'),
+    url('fonts/icomoon.svg?t4meip#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -40,8 +40,14 @@
 .icon-game-controller:before {
   content: "\e904";
 }
+.icon-gauge:before {
+  content: "\e910";
+}
 .icon-home:before {
   content: "\e905";
+}
+.icon-mail:before {
+  content: "\e911";
 }
 .icon-menu:before {
   content: "\e90f";
@@ -57,6 +63,12 @@
 }
 .icon-tv:before {
   content: "\e909";
+}
+.icon-user:before {
+  content: "\e912";
+}
+.icon-paypal:before {
+  content: "\e913";
 }
 .icon-notice:before {
   content: "\e900";
