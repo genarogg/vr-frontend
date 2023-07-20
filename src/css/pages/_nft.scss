@@ -1,64 +1,110 @@
 .nft {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  display: grid;
+
+  justify-items: center;
+  margin-top: 100px;
+  /*  gap: 60px; */
+  .container-info-nfts {
     display: grid;
-  
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
     justify-items: center;
-  
-    /*  gap: 60px; */
-    .container-info-nfts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 60%;
-      justify-items: center;
-      grid-gap: 40px;
-  
-      border: 1px solid rgba($colorButton, 0.8);
-      padding: 30px;
-      background-color: rgba($colorButton, 0.4);
-      border-radius: 10px;
-      margin-bottom: 60px;
-  
-      &:nth-child(odd) {
-        .text {
-          order: 2;
-        }
-        img {
-          order: 1;
-        }
-      }
-  
+    grid-gap: 40px;
+
+    border: 1px solid rgba($colorButton, 0.8);
+    padding: 30px;
+    background-color: rgba($colorButton, 0.4);
+    border-radius: 10px;
+    margin-bottom: 60px;
+
+    min-width: 1024px;
+
+    &:nth-child(odd) {
       .text {
-        h2 {
-          font-size: 36px;
-          margin-bottom: 20px;
-        }
-  
-        p {
-          margin-bottom: 10px;
-        }
+        order: 2;
       }
-  
       img {
-        object-fit: contain !important;
+        order: 1;
       }
     }
-  
-    .contaienerRarible {
-      margin-bottom: 60px;
-  
-      a {
-        background-color: $colorButton;
-        padding: 10px;
-        border-radius: 15px;
-        text-decoration: none;
-        font-weight: 600;
+
+    .text {
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
       }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    img {
+      object-fit: contain !important;
     }
   }
 
-  .bg{
-    
+  .contaienerRarible {
+    margin-bottom: 60px;
+
+    a {
+      background-color: $colorButton;
+      padding: 10px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
   }
+}
+
+@media screen and (max-width: 1050px) {
+  .nft {
+    border: 1px solid rgba(42, 43, 56, 0.8);
+
+    background-color: rgba(42, 43, 56, 0.4);
+
+    &:first-child {
+      padding-top: 30px;
+    }
+
+    &:last-child {
+      padding-bottom: 30px;
+    }
+
+    .container-info-nfts {
+      grid-template-columns: 1fr;
+      min-width: 98vw;
+      margin-bottom: 0px;
+      padding: 0px 30px;
+      border: 1px solid rgba(42, 43, 56, 0);
+
+      background-color: rgba(42, 43, 56, 0);
+
+      &:nth-child(odd) {
+        .text {
+          order: initial;
+        }
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .contaienerRarible {
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .nft .container-info-nfts{
+    padding: 0 15px;
+  }
+  
+}
