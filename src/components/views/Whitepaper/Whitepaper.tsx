@@ -6,6 +6,7 @@ import Layout from "../../layout"
 import consultas from "../../../consultas"
 //@ts-ignore
 import Info from "./info.js"
+import $, { $classList, $toggle } from "../../../functions/$"
 
 interface WhitepaperProps {}
 
@@ -42,7 +43,16 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
 
     gamePlay: {
       titulo: "Game Play",
-      info: "<p>Al iniciar la carrera y colocar el vehículo en la marca de salida, tu vehículo, se conectará por audio con los otros 4 usuarios que competirán contra ti, accediendo desde tu micrófono y audífono a la internet, creando interacción entre los participantes, bien sea para indicar trucos o advertencia de caminos a tomar.</p>",
+      info: `<p>El jugador inicia en la línea de salida con su vehículo y el objetivo es completar el circuito en el menor tiempo posible. El jugador debe controlar el vehículo para evitar chocar contra las estructuras de los circuitos y los postes, así como contra otros vehículos que participan en la carrera.
+      </p><p>
+      El jugador puede controlar la velocidad del vehículo mediante el pedal del acelerador y del freno, y puede girar el volante para cambiar la dirección del vehículo. Además, puede utilizar diferentes habilidades, como aumentar la velocidad temporalmente o utilizar un Nitro para acelerar el vehículo.
+    
+     </p>
+     
+     <p> Durante la carrera, el jugador debe estar atento a los obstáculos en la pista, como curvas cerradas, Islas (separadores de canal) y cambios de elevación, que pueden afectar la velocidad del vehículo y su capacidad para controlarlo. También puede encontrar diferentes.
+     </p>
+     <p>Una vez que el jugador completa el circuito, se muestra el tiempo que tardó en hacerlo y su posición final en la carrera. Dependiendo de la modalidad de juego (PVE, PVP o Fast Lap), puede recibir una recompensa en efectivo o un premio en el juego que le permita mejorar su vehículo o comprar nuevos.</p>
+     `,
     },
     mecanica: {
       titulo: "Mecánica Del Juego",
@@ -54,7 +64,7 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
     },
     diseno: {
       titulo: `Diseño`,
-      info: `<p>Los Vehículos aquí mostrados, son de nuestra inspiración, solo pocos diseños son tomados de la vida real, pero en su mayoría diseñada por nuestra empresa asociada BastarII Design C.A, dirigida por un Venezolano creativo quien bajo su marca nos facilitó los diseños que ahora usted utiliza, los circuitos, e Islas Shinjuku, diseñada por Desincryp.com… todo cuenta con un diseño futurista, e innovador que se asemeja a la realidad y causa un gran impacto entre sus usuarios, proporcionando excelentes diseños para que los usuarios tengan mejor experiencia, extraordinarios paisajes y un muy detallado acabado en nuestros diseños.</p>
+      info: `<p>Descubre una nueva dimensión en movilidad: nuestros vehículos son fruto de una inspiración sin límites. La mayoría de nuestros diseños son exclusivos, creados por el talentoso equipo de BastarII Design C.A, liderado por un visionario venezolano. Gracias a esta asociación, hemos logrado ofrecerte diseños futuristas e innovadores que se asemejan a la realidad y generan un impacto profundo en quienes los utilizan. Desde los circuitos hasta las Islas Shinjuku, todo ha sido meticulosamente concebido por Desincryp.com para proporcionarte una experiencia única. Adéntrate en un mundo de paisajes extraordinarios y acabados detallados que elevarán tu experiencia a niveles insospechados.</p>
          `,
     },
 
@@ -272,130 +282,163 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
 
   const [myInfo, setMyInfo] = useState(info.historia)
 
+  const activeSidebar = () => {
+    $toggle("openSiderbar", "active")
+  }
+
+  const activeEliminar = () => {
+    $classList("sidebar").remove("active")
+  }
+
+  const Asidebar = ({ id = "" }) => {
+    return (
+      <>
+        <aside id={id}>
+          <nav
+            onClick={() => {
+              activeEliminar()
+            }}
+          >
+            <ul>
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.historia)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-history"></Icono>
+                    Historia del video juego
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.genero)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-flash"></Icono>
+                    Genero del video juego
+                  </A>
+                </button>
+              </li>
+
+              {/* <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.etapas)
+                  }}
+                >
+                  <A to="#">
+                    <Icono
+                      css="icon-home
+"
+                    ></Icono>
+                    Etapas del Video Juego
+                  </A>
+                </button>
+              </li> */}
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.gamePlay)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-game-controller"></Icono>
+                    Game Play
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.mecanica)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-electric_car"></Icono>
+                    Mecánica Del Juego
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.diseno)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-auto_fix_high"></Icono>
+                    Diseño
+                  </A>
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.vehiculos)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-automobile"></Icono>
+                    Vehículos NFT
+                  </A>
+                </button>
+              </li>
+              {/*  <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.escuderia)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-shield"></Icono>
+                    Escuderia
+                  </A>
+                </button>
+              </li> */}
+              {/* <li>
+                <button
+                  onClick={() => {
+                    setMyInfo(info.compania)
+                  }}
+                >
+                  <A to="#">
+                    <Icono css="icon-text-document-inverted"></Icono>
+                    Compañia
+                  </A>
+                </button>
+              </li> */}
+            </ul>
+          </nav>
+        </aside>
+      </>
+    )
+  }
+
   return (
     <>
       <Layout headerNofixed={true}>
         <Img type="bg" src={consultas().nftBg} css="background">
           <div className="whitepaper">
             <div className="infoPaper">
-              <aside>
-                <nav>
-                  <ul>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.historia)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-history"></Icono>
-                          Historia del video juego
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.genero)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-flash"></Icono>
-                          Genero del video juego
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.gamePlay)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-game-controller"></Icono>
-                          Game Play
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.mecanica)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-electric_car"></Icono>
-                          Mecánica Del Juego
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.diseno)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-auto_fix_high"></Icono>
-                          Diseño
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.vehiculos)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-automobile"></Icono>
-                          Vehículos NFT
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.escuderia)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-shield"></Icono>
-                          Escuderia
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.compania)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono css="icon-text-document-inverted"></Icono>
-                          Compañia
-                        </A>
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(info.etapas)
-                        }}
-                      >
-                        <A to="#">
-                          <Icono
-                            css="icon-home
-"
-                          ></Icono>
-                          Etapas del Video Juego
-                        </A>
-                      </button>
-                    </li>
-                  </ul>
-                </nav>
-              </aside>
+              <Asidebar id="bigAside" />
               <div className="containerInfo">
+                <div
+                  className="openSiderbar"
+                  id="openSiderbar"
+                  onClick={() => {
+                    activeSidebar()
+                  }}
+                >
+                  <Icono css="icon-menu"></Icono>
+                  <Asidebar id="sidebar" />
+                </div>
+
                 <h2>{myInfo.titulo}</h2>
 
                 <div dangerouslySetInnerHTML={{ __html: myInfo.info }}></div>

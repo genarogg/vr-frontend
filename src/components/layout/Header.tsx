@@ -44,11 +44,12 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             <A to="/nfts">NFTs</A>
           </li>
           <li>
-            <A to="/dsp">DSP</A>
-          </li>
-          <li>
             <A to="/whitepaper">Whitepaper</A>
           </li>
+         {/*  <li>
+            <A to="/dsp">DSP</A>
+          </li> */}
+
           <li>
             <A to="https://desincryp.com/" type="a">
               Desincryp
