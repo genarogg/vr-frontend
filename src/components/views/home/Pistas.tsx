@@ -7,7 +7,7 @@ import consultas from "../../../consultas"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper"
+import { Autoplay } from "swiper/modules"
 
 // Import Swiper styles
 import "swiper/css"

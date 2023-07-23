@@ -5,6 +5,7 @@ import Pit from "./Pit"
 import Vehiculos from "./Vehiculos"
 import Welcome from "./Welcome"
 import Layout from "../../layout"
+import Team from "./Team"
 
 interface HomeProps {}
 
@@ -12,11 +13,13 @@ const Home: FunctionComponent<HomeProps> = () => {
   return (
     <>
       <Layout>
-        <Welcome></Welcome>
+        {/* <Welcome></Welcome> */}
         <CuentaRegresiva></CuentaRegresiva>
         <Vehiculos></Vehiculos>
         <Pistas></Pistas>
         <Pit></Pit>
+
+        <Team></Team>
       </Layout>
     </>
   )
