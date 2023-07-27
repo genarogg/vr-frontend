@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react"
-import consultas from "../../../consultas"
+import Qwelcome from "../../../consultas/home/Qwelcome"
 import A from "../../nano/A"
 import Img from "../../nano/Img"
-import  { $toggle } from "../../../functions/$"
-import Form from "./Form"
-
+import { $toggle } from "../../../functions/$"
+import MyForm from "./Form/MyForm"
+import consultas from "../../../consultas"
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
@@ -13,27 +13,39 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
   }
 
   return (
-    <div className="home-background" id="home-bg">
-      <Img type="bg" src={consultas().background} css="background">
-        <div className="contain">
-          <Img src={consultas().logoHome} />
+    <>
+      <div className="welcome" id="welcome">
+        <Img type="bg" src={consultas().background} css="background">
+          <div className="container">
+            <Img src={Qwelcome().bg} />
 
-          <Form></Form>
-        </div>
+            <MyForm />
+          </div>
+        </Img>
+      </div>
+      {/* 
+      <div className="home-background" id="home-bg">
+        <Img type="bg" src={consultas().background} css="background">
+          <div className="contain">
+            <Img src={consultas().logoHome} />
 
-        <div className="iniciar-juego">
-          <A to="#">
-            <button
-              onClick={() => {
-                registro()
-              }}
-            >
-              Juega Ahora
-            </button>
-          </A>
-        </div>
-      </Img>
-    </div>
+            <Form></Form>
+          </div>
+
+          <div className="iniciar-juego">
+            <A to="#">
+              <button
+                onClick={() => {
+                  registro()
+                }}
+              >
+                Juega Ahora
+              </button>
+            </A>
+          </div>
+        </Img>
+      </div> */}
+    </>
   )
 }
 

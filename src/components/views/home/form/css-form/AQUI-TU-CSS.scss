@@ -1,0 +1,29 @@
+.containerForm.activeRight .backRight {
+  /*   max-height: initial;
+  min-height: initial; */
+}
+.validacion {
+  transition: $transicion600ms;
+  display: flex;
+  background-color: transparent !important;
+  border: none;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 300;
+  height: 40px;
+  margin-bottom: 10px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  p {
+    color: #ff3a3a !important;
+  }
+
+  &.active {
+    height: 40px;
+    opacity: 1;
+  }
+}
+
+

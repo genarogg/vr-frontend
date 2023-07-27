@@ -1,0 +1,31 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    place-items: center;
+
+    .containerForm {
+      margin-top: 430px;
+      transition: $transicion600msLineal;
+
+      &.activeRight {
+        margin-top: 150px;
+      
+      }
+
+      .backRight{
+        max-height: 720px;
+    min-height: 720px;
+      }
+    }
+  
+  }
+}

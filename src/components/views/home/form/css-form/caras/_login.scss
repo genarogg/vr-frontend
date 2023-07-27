@@ -1,0 +1,102 @@
+.containerForm {
+  .front {
+    backface-visibility: hidden;
+    border: 1px solid transparent;
+
+    max-height: 450px;
+    min-height: 450px;
+
+    position: relative;
+    transition: $transicion600ms;
+    z-index: 1;
+    box-shadow: 0px 0px 5px transparent;
+
+    label span{
+      display: block;
+      margin: 0 auto;
+      margin-top: 1px;
+    }
+  }
+}
+
+.checkBoxContainer {
+  display: grid;
+  grid-template-columns: 2fr 14fr;
+  height: 39px;
+
+  label {
+    justify-content: left !important;
+  }
+
+  span {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      color: $colorFormButton;
+    }
+  }
+
+  p,
+  label,
+  span {
+    cursor: pointer;
+  }
+}
+
+.formGroupSesion {
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    button.login {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: white;
+      height: 40px;
+
+      outline: none;
+      /* padding: 5px 20px; */
+      width: 50%;
+    }
+  }
+
+  .forgotPasswordContainer {
+    display: flex;
+    justify-content: center;
+
+    button {
+      outline: none;
+      a {
+        text-decoration: none;
+        outline: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .title {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    p {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      height: 34px;
+      justify-content: center;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

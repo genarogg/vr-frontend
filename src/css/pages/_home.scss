@@ -194,11 +194,11 @@
       left: 140px;
     }
 
-    form {
+    /* form {
       position: relative;
       left: 150%;
       height: 390px;
-    }
+    } */
   }
 }
 
@@ -209,14 +209,14 @@
       left: 0;
     }
 
-    form {
+    /*     form {
       position: relative;
       left: 0;
-    }
+    } */
   }
 }
 
-form {
+/* form {
   padding: 20px;
   padding-top: 25px;
   border: 1px solid transparent;
@@ -246,7 +246,7 @@ form {
   .input {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+
 
     padding: 5px;
     height: 24px;
@@ -254,28 +254,10 @@ form {
     height: 36px;
     border: 1px solid #fff;
     background-color: rgba($colorButton, 0.1);
-    /*  backdrop-filter: blur(20px); */
     border-radius: 4px;
 
     margin-bottom: 20px;
-    /*  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
-    width: 100%;
-    height: 100%;
-    background-color: #2a2b38;
-     background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 300%;
-    position: absolute;
-    border-radius: 6px;
-    left: 0;
-    top: 0;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
- */
+
 
     display: grid;
     grid-template-columns: 2fr 16fr;
@@ -300,7 +282,7 @@ form {
       outline: none;
 
       width: 100%;
-      /* margin: 0px 10px; */
+
     }
 
     .ico {
@@ -314,9 +296,7 @@ form {
 
   fieldset {
     border: none;
-    /*  border: 1px solid #fff5;
-    background-color: rgba($colorButton, 0.1);
-    border-radius: 4px; */
+    
 
     input,
     label {
@@ -326,7 +306,6 @@ form {
     .radioGrup {
       height: 25px;
       display: flex;
-      /* justify-content: center; */
       align-items: center;
     }
   }
@@ -334,24 +313,14 @@ form {
   .btnSubmit {
     height: 24px;
     width: 318px;
-    /*  background-color: rgba($colorButton, 0.4); */
-    /* border: 1px solid #fff5; */
     outline: none;
     height: 36px;
     border-radius: 4px;
     position: absolute;
     bottom: 28px;
-    /* 
-    &:hover {
-      cursor: pointer;
-      border: 1px solid #d740da;
-    }
-
-    &:focus {
-      animation: opacidad 600ms normal;
-    } */
+  
   }
-}
+} */
 
 @keyframes opacidad {
   0% {
@@ -421,23 +390,23 @@ form {
       grid-template-rows: 1fr 1fr;
       justify-items: center;
 
-      .gatsby-image-wrapper,
+     /*  .gatsby-image-wrapper,
       form {
         left: 0;
         bottom: -180px;
-      }
+      } */
 
-      form {
+     /*  form {
         left: 0;
         bottom: -500px;
-      }
+      } */
     }
   }
 
   .home-background.iniciar-seccion .contain {
-    form {
+  /*   form {
       bottom: 230px;
-    }
+    } */
   }
 }
 
@@ -470,3 +439,4 @@ form {
 }
 
 @import "home/team";
+@import "home/welcome";

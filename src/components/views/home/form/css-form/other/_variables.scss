@@ -1,0 +1,80 @@
+$img-line: url(./img/line.png);
+
+/* fonts */
+$fontBasic: "Lato", "Crete Round", sans-serif;
+$fontTitle: "Crete Round", "Lato", sans-serif;
+
+$colorBackgroundBlackDark: #05070b;
+$gris: #333;
+$azul: #4353ff;
+
+$colorIcons: #fff;
+$textForm: #fff;
+
+/* Morados */
+$colorPurpleIntermedio: #2045e6;
+$colorPurpleOscuro: #122888;
+$formBackground: $colorPurpleOscuro;
+$formInputBackground: $colorPurpleIntermedio;
+$colorFormButton: #d740da;
+
+/* bordes */
+$borderRadius: 10px;
+$border: 1px solid #fff;
+
+/* transicion */
+$transicion600ms: all ease 0.6s;
+$transitionS1: 1s ease all;
+
+.ico {
+  color: $colorIcons;
+}
+
+.centerXY {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram {
+  border-radius: 5px;
+  color: #c15a3a !important;
+}
+
+.twitter {
+  border-radius: 5px;
+  color: #00acee !important;
+}
+
+.linkedin {
+  color: #0077b5 !important;
+}
+
+.github {
+  color: #ee216b !important;
+}
+
+.facebook {
+  color: #3b5998 !important;
+}
+
+.google {
+  color: #db4a39 !important;
+}
+.instagramHover,
+.twitterHover,
+.linkedinHover,
+.githubHover,
+.facebookHover,
+.googleHover {
+  &:hover {
+    border-radius: 5px;
+    color: #fff !important;
+  }
+}
+
+.centerXY {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
