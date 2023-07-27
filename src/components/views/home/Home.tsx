@@ -14,13 +14,13 @@ const Home: FunctionComponent<HomeProps> = () => {
     <>
       <Layout>
         <Welcome></Welcome>
-        <CuentaRegresiva></CuentaRegresiva>
+       {/*  <CuentaRegresiva></CuentaRegresiva>
         <Vehiculos></Vehiculos>
         <Pistas></Pistas>
         <Pit></Pit>
 
         <Team></Team>
-
+ */}
       </Layout>
     </>
   )
