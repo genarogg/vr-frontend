@@ -132,6 +132,13 @@ const $quitarAcentos = cadena => {
     .toString()
 }
 
+const $validarContrasenaDebil = contrasena => {
+  if (/[a-z]/.test(contrasena) && /[0-9]/.test(contrasena)) {
+    return false
+  }
+  return true
+}
+
 export {
   $alternalClass,
   $fadeOut,
@@ -148,6 +155,7 @@ export {
   $all,
   $toggle,
   $quitarAcentos,
+  $validarContrasenaDebil,
 }
 
 /* interface $Props {

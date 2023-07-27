@@ -3,18 +3,32 @@ import React, { useState } from "react"
 import A from "../../../../nano/A"
 
 import Buttons from "./components/Buttons"
-import RedesLogin from "./components/RedesLogin"
+/* import RedesLogin from "./components/RedesLogin"
 
-import SelectCountry from "./components/selected/SelectCountry"
+import SelectCountry from "./components/selected/SelectCountry" */
 import SelectSex from "./components/selected/SelectSex"
 
 import focus from "../functions/focus"
 import check from "../functions/check"
 import Input from "./components/Input"
 
+import axios from "axios"
+
 import $, { $validarContrasenaDebil } from "../../../../../functions/$"
 
+/* const { BACKEND } = process.env.config() */
+import { BACKEND } from "../../../../../../env"
+
 const Register = () => {
+  const peticion = (url, data) => {
+    axios
+      .post(url, data)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(async error => console.error("Error:", error))
+  }
+
   const isValido = () => {
     const validacion = $("validacion")
     validacion.classList.add("active")
@@ -26,30 +40,32 @@ const Register = () => {
   const submit = e => {
     e.preventDefault()
 
-    const nombre = $("registerUserName").value
-    const username = $("registerUserSurName").value
-    const userData = $("userData").value
-    const registerCorreo = $("registerCorreo").value
+    const nombre = $("registerUserName").value.toLowerCase()
+    const username = $("registerUserSurName").value.toLowerCase()
+    const edad = $("userData").value.toLowerCase()
+    const registerCorreo = $("registerCorreo").value.toLowerCase()
 
-    const sex = $("selLabel2").value
-   /*  const contry = $("selLabel").innerText */
+    const sex = $("selLabel2").value.toLowerCase()
+    /*  const contry = $("selLabel").innerText */
 
     const contrasena1 = $("registerPassword").value
     const contrasena2 = $("registerPasswordConfirm").value
 
     if (
-      nombre === "" ||
-      username === "" ||
-      userData === "" ||
-      registerCorreo === "" ||
-      sex === "" ||
-   /*    contry === "" || */
-      contrasena1 === ""
+      nombre.trim() === "" ||
+      username.trim() === "" ||
+      edad.trim() === "" ||
+      registerCorreo.trim() === "" ||
+      sex.trim() === "" ||
+      /*    contry.trim() === "" || */
+      contrasena1.trim() === ""
     ) {
       setmensaje("todos los campos son necesarios.")
       isValido()
       return
     }
+
+    console.log()
 
     if (contrasena1.length < 8) {
       isValido()
@@ -68,31 +84,27 @@ const Register = () => {
       return
     }
 
+    if (edad <= 0 || edad >= 120) {
+      setmensaje("La edad es invalida")
+      isValido()
+      return
+    }
+
     $("registerButtom").innerText = "creando cuenta"
 
     const data = {
       nombre,
       username,
-      FechaDeNacimiento: userData,
+      edad,
       email: registerCorreo,
       sexo: sex,
-    /*   contry, */
+      /*   contry, */
       password: contrasena1,
     }
 
     console.log(data)
 
-    fetch("http://localhost:4000/api/usuarios", {
-      method: "POST", // o 'PUT'
-      body: JSON.stringify(data), // data debe ser `string` o {object}!
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).catch(async error => console.error("Error:", error))
-
-    /* setTimeout(() => {
-      $("registerButtom").innerText = "Crear cuenta"
-    }, 1500); */
+    peticion(`${BACKEND}/user/register`, data)
   }
 
   const [mensaje, setmensaje] = useState("")
@@ -139,9 +151,9 @@ const Register = () => {
         {/* Input de fecha de nacimiento */}
 
         <Input
-          type="date"
+          type="number"
           id="userData"
-          placeholder="data"
+          placeholder="Edad"
           icono="icon-calendar"
           next="registerCorreo"
           maxLength="15"

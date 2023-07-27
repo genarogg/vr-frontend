@@ -22,7 +22,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     /*  */
-
+    /* `gatsby-env-variables`, */
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

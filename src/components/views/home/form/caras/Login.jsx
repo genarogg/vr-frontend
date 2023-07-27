@@ -1,18 +1,42 @@
-import React from "react"
+import React, { useState } from "react"
+
+import axios from "axios"
+//@ts-ignore
 import Buttons from "./components/Buttons"
 
 import $, { $toggle, $classList } from "../../../../../functions/$"
 import Icono from "../../../../nano/Icono"
-
-import RedesLogin from "./components/RedesLogin"
-
+//@ts-ignore
+/* import RedesLogin from "./components/RedesLogin" */
+//@ts-ignore
 import check from "../functions/check"
-
+//@ts-ignore
 import Input from "./components/Input"
+//@ts-ignore
 import focus from "../functions/focus"
+
+import { BACKEND } from "../../../../../../env"
 const Login = () => {
+  const peticion = (url, data) => {
+    axios
+      .post(url, data)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(async error => console.error("Error:", error))
+  }
+
   const submit = e => {
     e.preventDefault()
+    const email = $("loginCorreo").value.toLowerCase()
+    const password = $("loginPassword").value
+
+    const data = {
+      email,
+      password,
+    }
+
+    peticion(`${BACKEND}/user/login`, data)
   }
 
   /* Voltea la tarjeta para recuperar la contraseña */
