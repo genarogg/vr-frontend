@@ -390,13 +390,13 @@
       grid-template-rows: 1fr 1fr;
       justify-items: center;
 
-     /*  .gatsby-image-wrapper,
+      /*  .gatsby-image-wrapper,
       form {
         left: 0;
         bottom: -180px;
       } */
 
-     /*  form {
+      /*  form {
         left: 0;
         bottom: -500px;
       } */
@@ -404,7 +404,7 @@
   }
 
   .home-background.iniciar-seccion .contain {
-  /*   form {
+    /*   form {
       bottom: 230px;
     } */
   }
@@ -438,5 +438,5 @@
   }
 }
 
-@import "home/team";
-@import "home/welcome";
+@import "home2/team";
+@import "home2/welcome";

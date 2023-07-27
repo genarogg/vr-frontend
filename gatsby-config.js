@@ -15,11 +15,10 @@ module.exports = {
     siteUrl: `http://localhost`,
   },
   plugins: [
-
     /*  */
     `gatsby-plugin-offline`,
-    'gatsby-plugin-remove-console',
-    'gatsby-plugin-robots-txt',
+    "gatsby-plugin-remove-console",
+    "gatsby-plugin-robots-txt",
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     /*  */
