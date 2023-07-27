@@ -3,7 +3,7 @@ import Qwelcome from "../../../consultas/home/Qwelcome"
 import A from "../../nano/A"
 import Img from "../../nano/Img"
 import { $toggle } from "../../../functions/$"
-import MyForm from "./Form/MyForm"
+import MyForm from "./form/MyForm"
 import consultas from "../../../consultas"
 interface WelcomeProps {}
 
