@@ -1,14 +1,17 @@
-import React, { useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import A from "../nano/A"
 import Img from "../nano/Img"
 import consultas from "../../consultas"
 
 import $, { $toggle } from "../../functions/$"
 import Icono from "../nano/Icono"
-
+import AuthContext from "../../context/autenticacion/authContext"
 interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
+  const authContext = useContext(AuthContext)
+  const { usuarioAutenticado } = authContext
+
   /* agregar y elimina la clase menuFixed */
   const scrollHeader = () => {
     //Efecto pegajos para el header usando el movimiento del scroll
@@ -27,6 +30,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     window.onscroll = () => {
       scrollHeader()
     }
+    usuarioAutenticado()
   }, [])
 
   const abrirMenu = () => {
@@ -46,7 +50,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           <li>
             <A to="/whitepaper">Whitepaper</A>
           </li>
-         {/*  <li>
+          {/*  <li>
             <A to="/dsp">DSP</A>
           </li> */}
 

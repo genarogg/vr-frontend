@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import "../../css/style.scss"
 import "../../css/lib/icomoon/style.css"
 import Header from "./Header"
 import Footer from "./Footer"
 import AuthState from "../../context/autenticacion/authState"
+
+
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -13,6 +15,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   children,
   headerNofixed = false,
 }) => {
+
+
   return (
     <>
       <AuthState>

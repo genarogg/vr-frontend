@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 
 import A from "../../../../nano/A"
 
@@ -17,17 +17,20 @@ import axios from "axios"
 import $, { $validarContrasenaDebil } from "../../../../../functions/$"
 
 /* const { BACKEND } = process.env.config() */
-import { BACKEND } from "../../../../../../env"
+
+import AuthContext from "../../../../../context/autenticacion/authContext"
 
 const Register = () => {
-  const peticion = (url, data) => {
+  const authContext = useContext(AuthContext)
+  const { registrarUsuario } = authContext
+  /* const peticion = (url, data) => {
     axios
       .post(url, data)
       .then(res => {
         console.log(res)
       })
       .catch(async error => console.error("Error:", error))
-  }
+  } */
 
   const isValido = () => {
     const validacion = $("validacion")
@@ -104,7 +107,8 @@ const Register = () => {
 
     console.log(data)
 
-    peticion(`${BACKEND}/user/register`, data)
+    /* peticion(`${BACKEND}/user/register`, data) */
+    registrarUsuario(data)
   }
 
   const [mensaje, setmensaje] = useState("")

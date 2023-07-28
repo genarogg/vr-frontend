@@ -36,7 +36,7 @@ const AuthState = props => {
       })
 
       /* Obtener el usuario */
-      usuarioAutenticado()
+      usuarioAutenticado(datos)
     } catch (error) {
       console.log(error)
 
@@ -52,7 +52,7 @@ const AuthState = props => {
   }
 
   /* Retorna el usuario autenticado */
-  const usuarioAutenticado = async datos => {
+  const usuarioAutenticado = async () => {
     const token = localStorage.getItem("token")
 
     if (token) {
@@ -60,14 +60,9 @@ const AuthState = props => {
       tokenAuth(token)
     }
 
-    let { email, password } = datos
-
     try {
-      const respuesta = await clienteAxios.post("/user/login", {
-        email,
-        password,
-      })
-      console.log(respuesta)
+      const respuesta = await clienteAxios.post(`/user/login/${token}`)
+
       dispath({
         type: OBTENER_USUARIO,
         payload: respuesta.data,
