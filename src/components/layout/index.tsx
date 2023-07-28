@@ -3,6 +3,7 @@ import "../../css/style.scss"
 import "../../css/lib/icomoon/style.css"
 import Header from "./Header"
 import Footer from "./Footer"
+import AuthState from "../../context/autenticacion/authState"
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -14,12 +15,14 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 }) => {
   return (
     <>
-      <Header />
-      {headerNofixed ? <div className="headerNoFixed"></div> : null}
-      <main id="main" className="main">
-        {children}
-      </main>
-      <Footer />
+      <AuthState>
+        <Header />
+        {headerNofixed ? <div className="headerNoFixed"></div> : null}
+        <main id="main" className="main">
+          {children}
+        </main>
+        <Footer />
+      </AuthState>
     </>
   )
 }

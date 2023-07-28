@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
 
 import axios from "axios"
 //@ts-ignore
@@ -16,15 +16,12 @@ import Input from "./components/Input"
 import focus from "../functions/focus"
 
 import { BACKEND } from "../../../../../../env"
+
+import AuthContext from "../../../../../context/autenticacion/authContext"
+
 const Login = () => {
-  const peticion = (url, data) => {
-    axios
-      .post(url, data)
-      .then(res => {
-        console.log(res)
-      })
-      .catch(async error => console.error("Error:", error))
-  }
+  const authContext = useContext(AuthContext)
+  const { iniciarSesion } = authContext
 
   const submit = e => {
     e.preventDefault()
@@ -36,7 +33,7 @@ const Login = () => {
       password,
     }
 
-    peticion(`${BACKEND}/user/login`, data)
+    iniciarSesion(data)
   }
 
   /* Voltea la tarjeta para recuperar la contraseña */
