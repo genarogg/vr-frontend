@@ -22,8 +22,12 @@ const AuthState = props => {
     return " "
   } */
 
+  useEffect(() => {
+    initialState.token = localStorage.getItem("token")
+  }, [])
+
   const initialState = {
-    token: !localStorage.getItem("token"),
+    token: localStorage.getItem("token"),
     autenticado: null,
     usuario: null,
     mensaje: null,
