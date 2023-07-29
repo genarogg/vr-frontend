@@ -14,16 +14,16 @@ import {
 import tokenAuth from "../../config/tokenAuth"
 
 const AuthState = props => {
-  const storageToken = () => {
+  /* const storageToken = () => {
     if (window !== "undefined") {
       initialState.token = localStorage.getItem("token")
       retrun
     }
     return " "
-  }
+  } */
 
   const initialState = {
-    token: storageToken(),
+    token: !localStorage.getItem("token"),
     autenticado: null,
     usuario: null,
     mensaje: null,
