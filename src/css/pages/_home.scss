@@ -56,88 +56,6 @@
   }
 }
 
-.sections {
-  padding: 20px 0;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  /*  background-color: #070b20; */
-
-  h2 {
-    text-align: center;
-    margin: 32px 0 42px 0;
-    font-size: 50px;
-  }
-
-
-  /* slider */
-  &.pistas {
-    display: block;
-
-    backdrop-filter: blur(20px);
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-
-    background-color: #2a2b38;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 130%;
-
-    .center {
-      display: flex;
-      justify-content: center;
-
-    }
-
-    .swiper {
-      width: 100%;
-      margin: 60px 0;
-
-      .gatsby-image-wrapper-constrained {
-        border-radius: 20px;
-      }
-
-      .swiper-slide {
-        display: flex;
-        justify-content: center;
-      }
-      .sliderContariner {
-        width: 380px;
-      }
-
-      /* img {
-         filter: saturate(2);
-        } */
-    }
-  }
-
-  .containerPit {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 120px;
-    .caracteristica {
-      max-width: 360px;
-
-      .ico {
-        @include center();
-        font-size: 32px;
-        margin: 20px;
-      }
-
-      h2 {
-        font-size: 24px;
-        margin: 24px;
-      }
-    }
-  }
-
-  &.pit {
-    h2 {
-      margin-bottom: 10px;
-    }
-  }
-}
-
 .home-background {
   display: grid;
   justify-items: center;
@@ -157,12 +75,6 @@
       position: relative;
       left: 140px;
     }
-
-    /* form {
-      position: relative;
-      left: 150%;
-      height: 390px;
-    } */
   }
 }
 
@@ -172,119 +84,8 @@
       position: relative;
       left: 0;
     }
-
-    /*     form {
-      position: relative;
-      left: 0;
-    } */
   }
 }
-
-/* form {
-  padding: 20px;
-  padding-top: 25px;
-  border: 1px solid transparent;
-  background-color: rgba($colorButton, 0.6);
-  border-radius: 8px;
-  max-width: 360px;
-  border: 1px solid rgba(#fff, 0.4);
-  position: relative;
-  background-color: rgba(#5331d9, 0.4);
-  backdrop-filter: blur(20px);
-
-  border-radius: 4px;
-  margin-bottom: 10px;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-  width: 100%;
-  height: 100%;
-  background-color: #2a2b38;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 300%;
-
-  * {
-    font-weight: 400;
-    color: #fff;
-  }
-
-  .input {
-    display: flex;
-    align-items: center;
-
-
-    padding: 5px;
-    height: 24px;
-    width: 320px;
-    height: 36px;
-    border: 1px solid #fff;
-    background-color: rgba($colorButton, 0.1);
-    border-radius: 4px;
-
-    margin-bottom: 20px;
-
-
-    display: grid;
-    grid-template-columns: 2fr 16fr;
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:hover,
-    &:focus,
-    &.active {
-      border: 1px solid $colorForm;
-    }
-
-    input::placeholder,
-    &::placeholder {
-      color: #fff;
-    }
-
-    input {
-      background-color: transparent;
-      border: none;
-      outline: none;
-
-      width: 100%;
-
-    }
-
-    .ico {
-      width: 18px;
-      display: flex;
-      justify-content: center;
-      fill: #fff;
-      padding-left: 8px;
-    }
-  }
-
-  fieldset {
-    border: none;
-    
-
-    input,
-    label {
-      cursor: pointer;
-    }
-
-    .radioGrup {
-      height: 25px;
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .btnSubmit {
-    height: 24px;
-    width: 318px;
-    outline: none;
-    height: 36px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 28px;
-  
-  }
-} */
 
 @keyframes opacidad {
   0% {
@@ -404,6 +205,5 @@
 
 @import "home2/team";
 @import "home2/welcome";
-@import "home2/cuenta-regresiva";
-@import "home2/section";
 
+@import "home2/section";

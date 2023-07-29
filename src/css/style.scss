@@ -5,7 +5,7 @@
 @import "./layout/layout";
 @import "./theme/dark";
 @import "./pages/home";
-@import "./pages/home2/cuenta-regresiva";
+
 @import "./pages/formHome";
 @import "./pages/nft";
 @import "./pages/whitepaper";
@@ -38,7 +38,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  /* height: 300px; */
 }
 
 .swiper-slide img {

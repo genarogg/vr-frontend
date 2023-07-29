@@ -46,6 +46,7 @@ const Pistas: React.FunctionComponent<PistasProps> = () => {
         effect="fade"
         speed={3000}
         spaceBetween={0}
+        
         pagination={{
           clickable: true,
         }}
