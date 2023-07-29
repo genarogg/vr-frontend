@@ -15,7 +15,7 @@ import tokenAuth from "../../config/tokenAuth"
 
 const AuthState = props => {
   const initialState = {
-    token: localStorage.getItem("token") || "",
+    token: localStorage.getItem("token") || " ",
     autenticado: null,
     usuario: null,
     mensaje: null,
