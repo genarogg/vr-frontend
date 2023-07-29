@@ -11,7 +11,7 @@ interface HeaderProps {}
 const Header: React.FunctionComponent<HeaderProps> = () => {
   const authContext = useContext(AuthContext)
   const { usuarioAutenticado, autenticado, usuario } = authContext
-  usuarioAutenticado()
+  /* usuarioAutenticado() */
   /* agregar y elimina la clase menuFixed */
   const scrollHeader = () => {
     //Efecto pegajos para el header usando el movimiento del scroll
