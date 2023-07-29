@@ -5,12 +5,14 @@
 @import "./layout/layout";
 @import "./theme/dark";
 @import "./pages/home";
+@import "./pages/home2/cuenta-regresiva";
 @import "./pages/formHome";
 @import "./pages/nft";
 @import "./pages/whitepaper";
 
-
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 html,
 body {
   position: relative;
