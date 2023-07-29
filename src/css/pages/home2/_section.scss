@@ -1,0 +1,78 @@
+section {
+  &.vehiculos,
+  &.pistas {
+    h2 {
+      text-align: center;
+      margin: 32px 0 42px 0;
+      font-size: 50px;
+    }
+
+    p {
+      max-width: 1120px;
+      font-weight: 400;
+
+      text-align: justify;
+      line-height: 28px;
+      font-size: 18px;
+      backdrop-filter: blur(3px);
+      text-shadow: 0 0 20px black;
+    }
+  }
+
+  &.vehiculos {
+    padding: 20px 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+
+    .videos {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      width: 100%;
+      align-items: center;
+      justify-items: center;
+
+      .videoContainer {
+        width: 360px;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 60px 0;
+
+        border: 3px solid rgba(0, 0, 0, 0);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-image: linear-gradient(#111, #111),
+          linear-gradient(#e91e63, #00000000, #00b09000, #4285f4);
+      }
+    }
+  }
+
+  &.pistas {
+    padding: 20px 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-attachment: fixed;
+
+    .sliderContariner {
+      > div {
+        border: 3px solid rgba(0, 0, 0, 0);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-image: linear-gradient(#111, #111),
+          linear-gradient(#e91e63, #00000000, #00b09000, #4285f4);
+        border-radius: 15px;
+        img {
+          filter: saturate(1.1);
+        }
+      }
+    }
+  }
+}

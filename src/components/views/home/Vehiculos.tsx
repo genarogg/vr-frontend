@@ -1,9 +1,6 @@
-import React from "react"
-import Section from "./Section"
-import Video from "../../nano/Video"
-
-//@ts-ignore
-import videoCuentaRegresiva from "../../../img/home/video/CUENTA-REGRESIVA.mp4"
+import React, { useEffect } from "react"
+import Img from "../../nano/Img"
+import Qhome from "../../../consultas/home/Qhome"
 
 interface VehiculosProps {}
 
@@ -11,8 +8,14 @@ const widthVideo = 360
 const heightVideo = 202
 
 const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
+  useEffect(() => {
+    document.getElementById("vehiculos")!.style.backgroundImage = "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)"
+  }, [])
+
   return (
-    <Section id="vehiculos" css="vehiculos" title="Vehiculos">
+    <section className="vehiculos" id="vehiculos">
+      {/* <Img type="bg" src={Qhome().bgVehiculos}> */}
+      <h2>vehiculos</h2>
       <p>
         Los espectaculares diseños de los autos, de nuestra galería, pertenecen
         al Modelado 3D de algunos de los vehículos que traeremos a continuación
@@ -27,7 +30,6 @@ const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
       </p>
 
       <div className="videos">
-        {/* <Video src={videoCuentaRegresiva} id="video1" play={false}></Video> */}
         <div className="videoContainer">
           <iframe
             width={widthVideo}
@@ -72,11 +74,9 @@ const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
             allowFullScreen
           ></iframe>
         </div>
-        {/*    <Video src={videoCuentaRegresiva} id="video2" play={false}></Video>
-        <Video src={videoCuentaRegresiva} id="video3" play={false}></Video>
-        <Video src={videoCuentaRegresiva} id="video4" play={false}></Video> */}
       </div>
-    </Section>
+      {/* </Img> */}
+    </section>
   )
 }
 

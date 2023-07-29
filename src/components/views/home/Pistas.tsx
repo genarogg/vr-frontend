@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { v4 as uuidv4 } from "uuid"
 
-import Section from "./Section"
 import Img from "../../nano/Img"
 import consultas from "../../../consultas"
 
@@ -15,8 +14,15 @@ import "swiper/css"
 interface PistasProps {}
 
 const Pistas: React.FunctionComponent<PistasProps> = () => {
+  useEffect(() => {
+    document.getElementById("pistas")!.style.backgroundImage =
+      "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)"
+  }, [])
+
   return (
-    <Section id="pistas" css="pistas" title="Pistas">
+    <section id="pistas" className="pistas">
+      <h2>Pistas</h2>
+
       <div className="center">
         <p>
           Las pistas más feroces, con curvas pronunciadas, atajos y obstáculos
@@ -75,7 +81,7 @@ const Pistas: React.FunctionComponent<PistasProps> = () => {
           )
         })}
       </Swiper>
-    </Section>
+    </section>
   )
 }
 

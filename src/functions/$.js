@@ -139,6 +139,35 @@ const $validarContrasenaDebil = contrasena => {
   return true
 }
 
+const $moveComponent = (event, id) => {
+  if (!id) {
+    return
+  }
+  // Obtener el elemento de la imagen y el tamaño de la ventana
+  const element = $(id)
+  const windowWidth = window.innerWidth
+  const windowHeight = window.innerHeight
+
+  // Obtener las coordenadas del mouse
+  const mouseX = event.clientX
+  const mouseY = event.clientY
+
+  // Calcular el porcentaje de desplazamiento paraelementn
+  const percentageX = mouseX / windowWidth
+  const percentageY = mouseY / windowHeight
+
+  // Definir los máximos valores de desplazamiento (ajusta según tus preferencias)
+  const maxTranslateX = 50
+  const maxTranslateY = 50
+
+  // Calcular el desplazamiento en píxeles
+  const translateX = maxTranslateX * percentageX - maxTranslateX / 2
+  const translateY = maxTranslateY * percentageY - maxTranslateY / 2
+
+  // Aplicar la transformación CSS para mover la imagen
+  element.style.transform = `translate(${translateX}px, ${translateY}px)`
+}
+
 export {
   $alternalClass,
   $fadeOut,
@@ -156,6 +185,7 @@ export {
   $toggle,
   $quitarAcentos,
   $validarContrasenaDebil,
+  $moveComponent,
 }
 
 /* interface $Props {

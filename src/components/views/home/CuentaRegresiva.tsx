@@ -8,14 +8,22 @@ import Img from "../../nano/Img"
 
 import Qhome from "../../../consultas/home/Qhome"
 
+import { $moveComponent } from "../../../functions/$"
+
 interface CuentaRegresivaProps {}
 
 const CuentaRegresiva: FunctionComponent<CuentaRegresivaProps> = () => {
   return (
     <>
-      <section id="cuentaRegresiva" className="cuenta-regresiva">
+      <section
+        id="cuentaRegresiva"
+        className="cuenta-regresiva"
+        onMouseMove={e => {
+          $moveComponent(e, "bgVideo")
+        }}
+      >
         <h2>YA ESTAMOS EN CUENTA REGRESIVA</h2>
-        <Img type="bg" src={Qhome().bgVideo}>
+        <Img type="bg" src={Qhome().bgVideo} id="bgVideo">
           <Video src={videoCuentaRegresiva} id="cuentaRegresivaVideo"></Video>
         </Img>
       </section>

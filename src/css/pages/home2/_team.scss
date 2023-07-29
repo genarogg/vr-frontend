@@ -4,9 +4,7 @@
   justify-content: center;
   align-items: center;
 
-/*   *{border: 1px solid red;} */
-/*  */
-  .sliderContainer{
+  .sliderContainer {
     max-width: 1250px;
   }
 
@@ -26,7 +24,7 @@
     padding: 15px;
     position: relative;
     img {
-        border-radius: 15px 15px 0 0;
+      border-radius: 15px 15px 0 0;
       border: 1px solid;
     }
     h3,
@@ -47,16 +45,13 @@
 
     h3 {
       text-transform: uppercase;
-     /*  background: #fff; */
       height: 36px;
       border-radius: 0 0 15px 15px;
       margin-bottom: 20px;
     }
 
     h4 {
-        height: 36px;
-      /* padding: 0px 10px 0 10px; */
- /*      margin-bottom: 20px; */
+      height: 36px;
       border-radius: 15px 15px 0 0;
     }
 
@@ -77,18 +72,17 @@
       width: 100%;
       left: 0;
 
-      a{
+      a {
         text-decoration: none;
       }
-     
+
       span {
         padding: 10px;
         background-color: #fff;
         color: #282828;
         transition: $transicion600ms;
-        &:hover{
-
-            background-color: #4285f4;
+        &:hover {
+          background-color: #4285f4;
         }
         &:first-child {
           border-radius: 15px 0 0 0;
