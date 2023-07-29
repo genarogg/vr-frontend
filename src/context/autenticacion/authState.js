@@ -1,4 +1,4 @@
-import React, { useReducer } from "react"
+import React, { useReducer, useEffect } from "react"
 import authContext from "./authContext"
 import authReducer from "./authReducer"
 import clienteAxios from "../../config/axios"
@@ -14,8 +14,12 @@ import {
 import tokenAuth from "../../config/tokenAuth"
 
 const AuthState = props => {
+  useEffect(() => {
+    initialState.token = localStorage.getItem("token")
+  }, [])
+
   const initialState = {
-    token: localStorage.getItem("token") || " ",
+    token: null,
     autenticado: null,
     usuario: null,
     mensaje: null,
