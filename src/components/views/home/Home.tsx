@@ -17,13 +17,7 @@ const Home: FunctionComponent<HomeProps> = () => {
         <CuentaRegresiva></CuentaRegresiva>
         <Vehiculos></Vehiculos>
         <Pistas></Pistas>
-        {/*  
-        
-        
-  
-
         <Team></Team>
- */}
       </Layout>
     </>
   )

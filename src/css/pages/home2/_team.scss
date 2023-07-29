@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   .sliderContainer {
     max-width: 1250px;
@@ -23,10 +24,12 @@
     border-radius: 15px;
     padding: 15px;
     position: relative;
+    
     img {
       border-radius: 15px 15px 0 0;
       border: 1px solid;
     }
+
     h3,
     h4 {
       color: #000;

@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export interface XimgProps {
@@ -22,33 +22,37 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
   children,
   styles,
 }: XimgProps) => {
-  if (type === "fluit" || type === "dynamic") {
-    console.error("Este formato no es soportado desde gatsby 3 " + type)
-    return <></>
-  }
-
   const imgSRC = getImage(src)
+
+ /*  useEffect(() => {
+    
+  document
+   
+  }, []) */
+  
 
   if (type === "bg") {
     return (
       <>
-        <GatsbyImage
-          //@ts-ignore
-          image={imgSRC}
-          alt={alt}
-          id={id}
-          className={css}
-          style={{
-            position: "absolute",
-            zIndex: "-10000",
-            maxHeight: "100%",
-            maxWidth: "100%",
-            height:"100%",
-            top: "0",
-            left: "0",
-          }}
-        />
-        {children}
+        <span>
+          <GatsbyImage
+            //@ts-ignore
+            image={imgSRC}
+            alt={alt}
+            id={id}
+            className={css}
+            style={{
+              position: "absolute",
+              zIndex: "-10000",
+              maxHeight: "100%",
+              maxWidth: "100%",
+              height: "100%",
+              top: "0",
+              left: "0",
+            }}
+          />
+          {children}
+        </span>
       </>
     )
   }
