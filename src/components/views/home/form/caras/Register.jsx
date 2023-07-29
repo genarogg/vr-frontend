@@ -12,7 +12,7 @@ import focus from "../functions/focus"
 import check from "../functions/check"
 import Input from "./components/Input"
 
-import axios from "axios"
+
 
 import $, { $validarContrasenaDebil } from "../../../../../functions/$"
 
@@ -134,7 +134,7 @@ const Register = () => {
           type="text"
           id="registerUserName"
           placeholder="Nombre y apellido"
-          icono="icon-person"
+          icono="icon-user2"
           next="registerUserSurName"
           maxLength="15"
         />
@@ -145,7 +145,7 @@ const Register = () => {
           type="text"
           id="registerUserSurName"
           placeholder="Nombre de Usuario"
-          icono="icon-person"
+          icono="icon-user-add"
           next="registerCorreo"
           maxLength="15"
         />
@@ -176,14 +176,14 @@ const Register = () => {
           type="password"
           id="registerPassword"
           placeholder="Contraseña"
-          icono="icon-https"
+          icono="icon-lock"
           next="registerPasswordConfirm"
         />
         <Input
           type="password"
           id="registerPasswordConfirm"
           placeholder="Confirmar contraseña"
-          icono="icon-lock-plus"
+          icono="icon-lock-2"
         />
 
         {/* <RedesLogin /> */}
@@ -209,12 +209,12 @@ const Register = () => {
       </form>
       <div className="legal">
         <p>
-          Al registrarte, estas aceptando los{" "}
-          <A to={"/terminos-y-condiciones"}>Términos y condiciones</A>, y la{" "}
+          Al registrarte estas aceptando los{" "}
+          <A to={"/terminos-y-condiciones"}>Términos y condiciones</A> y la{" "}
           <A to="/politica-de-privacidad-y-protección-de-datos">
             Política de privacidad y protección de datos
           </A>{" "}
-          de Genarogg.
+          de vueltarapida.
         </p>
       </div>
     </div>

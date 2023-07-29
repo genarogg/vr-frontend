@@ -15,22 +15,22 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
             to="https://instagram.com/vuelatrapidagame?igshid=YmMyMTA2M2Y="
             type="a"
           >
-            <Icono css="icon-instagram"></Icono>
+            <Icono css="icon-instagram instagram"></Icono>
           </A>
         </li>
         <li>
           <A to="https://twitter.com/vueltarapidagam" type="a">
-            <Icono css="icon-twitter"></Icono>
+            <Icono css="icon-twitter twitter"></Icono>
           </A>
         </li>
         <li>
-          <A to="mailto:contactogame@vueltarapida.net" type="a">
-            <Icono css="icon-envelop"></Icono>
+          <A to="mailto:team@vueltarapida.net" type="a">
+            <Icono css="icon-mail  github"></Icono>
           </A>
         </li>
         <li>
           <A to="https://t.me/vueltarapid" type="a">
-            <Icono css="icon-telegram"></Icono>
+            <Icono css="icon-telegram telegram"></Icono>
           </A>
         </li>
       </ul>

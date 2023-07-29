@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?t4meip');
-  src:  url('fonts/icomoon.eot?t4meip#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?t4meip') format('truetype'),
-    url('fonts/icomoon.woff?t4meip') format('woff'),
-    url('fonts/icomoon.svg?t4meip#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?twhb6y');
+  src:  url('fonts/icomoon.eot?twhb6y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?twhb6y') format('truetype'),
+    url('fonts/icomoon.woff?twhb6y') format('woff'),
+    url('fonts/icomoon.svg?twhb6y#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,101 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail:before {
+  content: "\e914";
+}
+.icon-user3:before {
+  content: "\e923";
+}
+.icon-database:before {
+  content: "\e964";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-shield:before {
+  content: "\e9b4";
+}
+.icon-library:before {
+  content: "\e922";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-attachment:before {
+  content: "\e9cd";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
+.icon-user-add:before {
+  content: "\e91e";
+}
+.icon-user2:before {
+  content: "\e920";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e925";
+}
+.icon-check_box_outline_blank:before {
+  content: "\e911";
+}
+.icon-check_box:before {
+  content: "\e91a";
+}
+.icon-import_export:before {
+  content: "\e91d";
+}
 .icon-electric_car:before {
   content: "\e90b";
 }
 .icon-auto_fix_high:before {
   content: "\e90c";
 }
-.icon-monitor:before {
-  content: "\e901";
+.icon-send:before {
+  content: "\e916";
+}
+.icon-lock-2:before {
+  content: "\e917";
+}
+.icon-lock:before {
+  content: "\e918";
+}
+.icon-arrow-left:before {
+  content: "\e924";
+}
+.icon-user1:before {
+  content: "\e919";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-download:before {
+  content: "\e902";
+}
+.icon-history:before {
+  content: "\e90d";
+}
+.icon-automobile:before {
+  content: "\e90a";
+}
+.icon-intersex:before {
+  content: "\f224";
+}
+.icon-ethereum:before {
+  content: "\e91b";
+}
+.icon-trophy:before {
+  content: "\e91c";
 }
 .icon-flash:before {
   content: "\e90e";
@@ -45,9 +132,6 @@
 }
 .icon-home:before {
   content: "\e905";
-}
-.icon-mail:before {
-  content: "\e911";
 }
 .icon-menu:before {
   content: "\e90f";
@@ -70,36 +154,18 @@
 .icon-paypal:before {
   content: "\e913";
 }
+.icon-check1:before {
+  content: "\e91f";
+}
+.icon-cross:before {
+  content: "\e921";
+}
+.icon-monitor:before {
+  content: "\e901";
+}
 .icon-notice:before {
   content: "\e900";
 }
-.icon-envelop:before {
-  content: "\e945";
-}
-.icon-database:before {
-  content: "\e964";
-}
-.icon-telegram:before {
-  content: "\ea95";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-display:before {
-  content: "\e956";
-}
-.icon-shield:before {
-  content: "\e9b4";
-}
-.icon-instagram:before {
-  content: "\e903";
-}
-.icon-download:before {
-  content: "\e902";
-}
-.icon-history:before {
-  content: "\e90d";
-}
-.icon-automobile:before {
-  content: "\e90a";
+.icon-world:before {
+  content: "\e915";
 }

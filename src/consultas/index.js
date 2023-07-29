@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const Consultas = () => {
   const {
-    background,
     logoHome,
     logo,
     bandera,
@@ -29,39 +28,14 @@ const Consultas = () => {
     escuderia5,
   } = useStaticQuery(graphql`
     query {
-      background: file(
-        relativePath: {
-          eq: "home/blurred-traffic-light-trails-on-road-1-scaled.jpg"
-        }
-      ) {
-        sharp: childImageSharp {
-          gatsbyImageData(
-            width: 1920
-            height: 1080
-            placeholder: BLURRED
-            formats: WEBP
-          )
-        }
-      }
-
       logoHome: file(relativePath: { eq: "home/logo.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 798
-            quality: 100
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 798, quality: 100)
         }
       }
       logo: file(relativePath: { eq: "home/logo.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 250
-            quality: 100
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 250, quality: 100)
           original {
             src
           }
@@ -70,110 +44,59 @@ const Consultas = () => {
 
       bandera: file(relativePath: { eq: "home/fla.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 200
-            quality: 100
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 200, quality: 100)
         }
       }
       pista1: file(relativePath: { eq: "home/mapas/pista1.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista2: file(relativePath: { eq: "home/mapas/pista2.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista3: file(relativePath: { eq: "home/mapas/pista3.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista4: file(relativePath: { eq: "home/mapas/pista4.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista5: file(relativePath: { eq: "home/mapas/pista5.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista6: file(relativePath: { eq: "home/mapas/pista6.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista7: file(relativePath: { eq: "home/mapas/pista7.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pista8: file(relativePath: { eq: "home/mapas/pista8.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 360
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 360, quality: 90)
         }
       }
       pit: file(relativePath: { eq: "home/pit.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 300
-            quality: 90
-            placeholder: BLURRED
-            formats: WEBP
-          )
+          gatsbyImageData(width: 300, quality: 90)
         }
       }
       nftBg: file(relativePath: { eq: "nfts/nfts.jpg" }) {
         sharp: childImageSharp {
           gatsbyImageData(
             width: 1920
-            placeholder: BLURRED
-            formats: WEBP
+
             quality: 90
           )
         }
@@ -184,8 +107,7 @@ const Consultas = () => {
           gatsbyImageData(
             width: 500
             height: 500
-            placeholder: BLURRED
-            formats: WEBP
+
             quality: 100
           )
         }
@@ -195,8 +117,7 @@ const Consultas = () => {
           gatsbyImageData(
             width: 500
             height: 500
-            placeholder: BLURRED
-            formats: WEBP
+
             quality: 100
           )
         }
@@ -204,48 +125,48 @@ const Consultas = () => {
 
       vueltarapida: file(relativePath: { eq: "whitepaper/vueltarapida.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       cap1: file(relativePath: { eq: "whitepaper/cap1.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       cap2: file(relativePath: { eq: "whitepaper/cap2.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       cap3: file(relativePath: { eq: "whitepaper/cap3.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
 
       escuderia1: file(relativePath: { eq: "whitepaper/escuderia1.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       escuderia2: file(relativePath: { eq: "whitepaper/escuderia2.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       escuderia3: file(relativePath: { eq: "whitepaper/escuderia3.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       escuderia4: file(relativePath: { eq: "whitepaper/escuderia4.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
       escuderia5: file(relativePath: { eq: "whitepaper/escuderia5.jpg" }) {
         sharp: childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          gatsbyImageData
         }
       }
     }
@@ -263,7 +184,6 @@ const Consultas = () => {
   ]
 
   const data = {
-    background: background.sharp,
     logoHome: logoHome.sharp,
     logo: logo.sharp,
     logoOriginal: logo.sharp.original.src,

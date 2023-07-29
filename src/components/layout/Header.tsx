@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import A from "../nano/A"
 import Img from "../nano/Img"
-import consultas from "../../consultas"
+import Qglobal from "../../consultas/Qglobal"
 
 import $, { $toggle } from "../../functions/$"
 import Icono from "../nano/Icono"
@@ -10,8 +10,8 @@ interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
   const authContext = useContext(AuthContext)
-  const { usuarioAutenticado } = authContext
-
+  const { usuarioAutenticado, autenticado, usuario } = authContext
+  usuarioAutenticado()
   /* agregar y elimina la clase menuFixed */
   const scrollHeader = () => {
     //Efecto pegajos para el header usando el movimiento del scroll
@@ -30,8 +30,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     window.onscroll = () => {
       scrollHeader()
     }
-    usuarioAutenticado()
-  }, [])
+
+    autenticado ? document.body.classList.add("autenticado") : null
+  }, [autenticado])
 
   const abrirMenu = () => {
     $toggle("navMovile", "active")
@@ -42,30 +43,44 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       <nav className={css} id={id}>
         <ul>
           <li>
-            <A to="/">Inicio</A>
-          </li>
-          <li>
-            <A to="/nfts">NFTs</A>
-          </li>
-          <li>
-            <A to="/whitepaper">Whitepaper</A>
-          </li>
-          {/*  <li>
-            <A to="/dsp">DSP</A>
-          </li> */}
-
-          <li>
-            <A to="https://desincryp.com/" type="a">
-              Desincryp
+            <A to="/">
+              <Icono css="icon-home" />
+              Inicio
             </A>
           </li>
-          {/*  <li>
-          <A to="#">Idioma</A>
-        </li> */}
+          <li>
+            <A to="/nfts">
+              <Icono css="icon-ethereum " />
+              NFTs
+            </A>
+          </li>
+          <li>
+            <A to="/whitepaper">
+              <Icono css="icon-menu" />
+              Whitepaper
+            </A>
+          </li>
+
+          {autenticado ? (
+            <li>
+              <A to="/dashboard" css="user">
+                <Icono css="icon-user" />
+                {usuario.username}
+              </A>
+            </li>
+          ) : (
+            <li>
+              <A to="/" css="user">
+                <Icono css="icon-user" />
+                LOGIN
+              </A>
+            </li>
+          )}
         </ul>
       </nav>
     )
   }
+
   return (
     <header className="header " id="header">
       <button
@@ -80,7 +95,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       {navegacion("nav-movile", "navMovile")}
       <div className="logo">
         <A to="/">
-          <Img src={consultas().logo} />
+          <Img src={Qglobal().logo} />
         </A>
       </div>
       {navegacion("nav-desktop", "navDesktop")}

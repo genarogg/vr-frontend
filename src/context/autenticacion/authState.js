@@ -61,12 +61,14 @@ const AuthState = props => {
     }
 
     try {
-      const respuesta = await clienteAxios.post(`/user/login/${token}`)
+      if (token) {
+        const respuesta = await clienteAxios.post(`/user/login/${token}`)
 
-      dispath({
-        type: OBTENER_USUARIO,
-        payload: respuesta.data,
-      })
+        dispath({
+          type: OBTENER_USUARIO,
+          payload: respuesta.data,
+        })
+      }
     } catch (error) {
       console.log(error.response)
       dispath({

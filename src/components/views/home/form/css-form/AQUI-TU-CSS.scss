@@ -27,3 +27,14 @@
 }
 
 
+.checkBoxContainer span.active{
+  color: $azul;
+}
+
+.formGroupSesion button.submit:focus{
+  background-color: $azul !important;
+}
+
+.dropdown .selLabel::after{
+  color: #fff !important;
+}

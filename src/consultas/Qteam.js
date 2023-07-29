@@ -8,8 +8,8 @@ const Qteam = () => {
           gatsbyImageData(
             width: 1920
             height: 1080
-            placeholder: BLURRED
-            formats: WEBP
+            
+            
             quality: 100
           )
         }
@@ -17,7 +17,7 @@ const Qteam = () => {
 
       genarogg: file(relativePath: { eq: "home/team/genarogg.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(width: 350, formats: WEBP)
+          gatsbyImageData(width: 350)
         }
       }
     }

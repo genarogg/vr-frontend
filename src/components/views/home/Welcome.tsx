@@ -1,10 +1,12 @@
-import React, { FunctionComponent } from "react"
+import React, { useContext, FunctionComponent } from "react"
 import Qwelcome from "../../../consultas/home/Qwelcome"
 import A from "../../nano/A"
 import Img from "../../nano/Img"
 import { $toggle } from "../../../functions/$"
 import MyForm from "./form/MyForm"
-import consultas from "../../../consultas"
+/* import consultas from "../../../consultas" */
+import AuthContext from "../../../context/autenticacion/authContext"
+
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
@@ -12,39 +14,21 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
     $toggle("home-bg", "iniciar-seccion")
   }
 
+  const authContext = useContext(AuthContext)
+  const { autenticado } = authContext
+
   return (
     <>
-      <div className="welcome" id="welcome">
-        <Img type="bg" src={consultas().background} css="background">
-          <div className="container">
+      <div className={`welcome`} id="welcome">
+        <Img type="bg" src={Qwelcome().bg} css="background">
+        {/*   <div className="container">
             <Img src={Qwelcome().bg} />
 
-            <MyForm />
-          </div>
+            {autenticado ? null : <MyForm />}
+          </div> */}
         </Img>
       </div>
-      {/* 
-      <div className="home-background" id="home-bg">
-        <Img type="bg" src={consultas().background} css="background">
-          <div className="contain">
-            <Img src={consultas().logoHome} />
-
-            <Form></Form>
-          </div>
-
-          <div className="iniciar-juego">
-            <A to="#">
-              <button
-                onClick={() => {
-                  registro()
-                }}
-              >
-                Juega Ahora
-              </button>
-            </A>
-          </div>
-        </Img>
-      </div> */}
+     
     </>
   )
 }

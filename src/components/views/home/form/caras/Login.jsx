@@ -15,8 +15,6 @@ import Input from "./components/Input"
 //@ts-ignore
 import focus from "../functions/focus"
 
-
-
 import AuthContext from "../../../../../context/autenticacion/authContext"
 
 const Login = () => {
@@ -56,8 +54,8 @@ const Login = () => {
   const remerberme = () => {
     $toggle("checkRemember", "active")
 
-    $toggle("checkRemember", "icon-check-square")
-    $toggle("checkRemember", "icon-plus-square")
+    $toggle("checkRemember", "icon-checkbox-unchecked")
+    $toggle("checkRemember", "icon-checkbox-checked")
   }
 
   return (
@@ -82,7 +80,7 @@ const Login = () => {
             type="password"
             id="loginPassword"
             placeholder="Contraseña"
-            icono="icon-https"
+            icono="icon-lock"
           />
           {/* <RedesLogin /> */}
 
@@ -92,7 +90,7 @@ const Login = () => {
               remerberme()
             }}
           >
-            <Icono css="icon-plus-square" id="checkRemember" />
+            <Icono css="icon-checkbox-unchecked" id="checkRemember" />
             <label htmlFor="checkRemember" id="checkRememberLabel">
               <p>Mantener sesion</p>
             </label>
