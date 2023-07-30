@@ -6,12 +6,13 @@ import { $toggle } from "../../../functions/$"
 import MyForm from "./form/MyForm"
 /* import consultas from "../../../consultas" */
 import AuthContext from "../../../context/autenticacion/authContext"
+import {} from "./form/functions/$"
 
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
-  const registro = () => {
-    $toggle("home-bg", "iniciar-seccion")
+  const openForm = () => {
+    $toggle("welcome", "active")
   }
 
   const authContext = useContext(AuthContext)
@@ -21,14 +22,22 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
     <>
       <div className={`welcome`} id="welcome">
         <Img type="bg" src={Qwelcome().bg} css="background">
-        {/*   <div className="container">
-            <Img src={Qwelcome().bg} />
+          <div className="container">
+            <Img src={Qwelcome().logo} />
 
             {autenticado ? null : <MyForm />}
-          </div> */}
+
+            <button
+              onClick={() => {
+                openForm()
+              }}
+              className="activeForm"
+            >
+              login
+            </button>
+          </div>
         </Img>
       </div>
-     
     </>
   )
 }
