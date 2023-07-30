@@ -5,9 +5,11 @@
   height: 100vh;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
+
   .background {
+
+    position: fixed !important;
     img {
       width: 101%;
       left: -1%;

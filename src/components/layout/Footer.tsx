@@ -12,7 +12,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
       <ul>
         <li>
           <A
-            to="https://instagram.com/vuelatrapidagame?igshid=YmMyMTA2M2Y="
+            to="https://www.instagram.com/vueltarapidagame/"
             type="a"
           >
             <Icono css="icon-instagram instagram"></Icono>
@@ -29,7 +29,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
           </A>
         </li>
         <li>
-          <A to="https://t.me/vueltarapid" type="a">
+          <A to="https://t.me/vueltarapidagame" type="a">
             <Icono css="icon-telegram telegram"></Icono>
           </A>
         </li>
