@@ -1,4 +1,3 @@
-
 .validacion {
   transition: $transicion600ms;
   display: flex;
@@ -23,15 +22,20 @@
   }
 }
 
-
-.checkBoxContainer span.active{
+.checkBoxContainer span.active {
   color: $azul;
 }
 
-.formGroupSesion button.submit:focus{
+.formGroupSesion button.submit:focus {
   background-color: $azul !important;
 }
 
-.dropdown .selLabel::after{
+.dropdown .selLabel::after {
   color: #fff !important;
+}
+
+.containerForm {
+  max-height: initial;
+  min-height: initial;
+  margin-top: 0 !important
 }
