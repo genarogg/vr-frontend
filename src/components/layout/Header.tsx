@@ -10,7 +10,7 @@ interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
   const authContext = useContext(AuthContext)
-  const { usuarioAutenticado, autenticado, usuario } = authContext
+  const { usuarioAutenticado, cerrarSesion, autenticado, usuario } = authContext
 
   /* agregar y elimina la clase menuFixed */
   const scrollHeader = () => {
@@ -40,17 +40,42 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     $toggle("navMovile", "active")
   }
 
+  const opcionesUsuario = () => {
+    $toggle("header", "active")
+  }
+
   const login = () => {
     return (
       <>
         {" "}
         {autenticado ? (
-          <li>
-            <A to="/dashboard" css="user">
-              <Icono css="icon-user" />
-              {usuario.username}
-            </A>
-          </li>
+          <>
+            <li
+              onClick={() => {
+                opcionesUsuario()
+              }}
+            >
+              <A to="#" css="user">
+                <Icono css="icon-user" />
+                {usuario.username}
+              </A>
+
+              <div className="opcionesUsuario">
+                <nav>
+                  <ul>
+                    <li>
+                      <A to="/dashboard">dashboard</A>
+                    </li>
+                    <li>
+                      <button onClick={()=>{cerrarSesion()}}>
+                        <A to="#">cerrar sesion </A>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </li>
+          </>
         ) : (
           <li>
             <A to="/" css="user">
@@ -93,7 +118,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   }
 
   return (
-    <header className="header " id="header">
+    <header className="header" id="header">
       <button
         className="open-sidebar"
         onClick={() => {
