@@ -25,12 +25,10 @@ const Qwelcome = () => {
     }
   `)
 
-  console.log(patter.original)
-
   const data = {
     logo: logo.sharp,
     bg: bg.sharp,
-    patter: patter.original,
+    patter: patter.sharp.original,
   }
 
   return data

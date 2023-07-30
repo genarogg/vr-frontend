@@ -22,9 +22,9 @@ const AuthState = props => {
     return " "
   } */
 
-  /* useEffect(() => {
+  useEffect(() => {
     initialState.token = localStorage.getItem("token")
-  }, []) */
+  }, [])
 
   const initialState = {
     token: "",
