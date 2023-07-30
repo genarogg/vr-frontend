@@ -49,6 +49,7 @@ section {
         );
       background-origin: border-box;
       background-clip: padding-box, border-box;
+      margin-bottom: 30px;
     }
   }
 
@@ -152,11 +153,24 @@ section {
   }
 }
 
+@media screen and (max-width: 800px) {
+  section {
+    &.pistas {
+      padding: 0;
+      h2 {
+        margin: 0px 0 25px 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 620px) {
   section {
     &.vehiculos,
     &.pistas,
     &.cuenta-regresiva {
+      padding: 0;
+
       h2 {
         font-size: 25px;
       }
@@ -167,5 +181,11 @@ section {
 @media (min-width: 1050px) and (max-width: 1500px) {
   section.vehiculos .videos {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  section.vehiculos .videos .videoContainer {
+    margin: 30px 0;
   }
 }
