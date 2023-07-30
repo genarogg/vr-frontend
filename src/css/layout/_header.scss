@@ -1,24 +1,22 @@
 .header {
   align-self: flex-start;
 
-  width: 100%;
   border: 1px solid #fff;
   color: #fff;
   text-align: center;
   position: fixed;
 
   z-index: 10000;
-  width: 100%;
+
   display: grid;
   grid-template-columns: 1fr 6fr;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
 
-  background-color: #0b0b0e94;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 130%;
-  top: 5px;
   align-self: center;
+  top: 5px;
   width: 99%;
   display: flex;
 
@@ -49,7 +47,8 @@
   }
 
   .open-sidebar,
-  .nav-movile {
+  .nav-movile,
+  .leftHidden {
     display: none;
   }
 
@@ -64,13 +63,12 @@
       justify-content: center;
       align-items: center;
       height: 90px;
-      /* margin-right: 20px; */
 
       li {
         list-style: none;
         height: 100%;
         a {
-        
+          transition: initial;
           text-decoration: none;
 
           background-color: transparent;
@@ -90,6 +88,11 @@
           span {
             padding-right: 10px;
             color: $azul;
+            transition: initial;
+
+            &.text {
+              color: #fff;
+            }
           }
 
           &.user {
@@ -116,30 +119,81 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .header {
+    top: 0;
+    width: 100%;
+    border: initial;
+    border-bottom: 1px solid #fff;
+    border-radius: initial;
+
+    .logo {
+      @include center();
+      min-width: 150px;
+      max-width: 150px;
+      border-right: 1px solid #fff;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     .gatsby-image-wrapper {
-      max-width: 110px;
-      min-width: 110px;
+      max-width: 135px;
+      min-width: 135px;
     }
 
     nav ul {
       height: 60px;
       margin-right: 0;
+
+      li {
+        &:last-child {
+          width: 150px;
+          border-left: 1px solid #fff;
+          min-width: 150px;
+          max-width: 150px;
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 690px) {
   .header {
     grid-template-columns: 1fr 4fr 1fr;
-
+    border: initial;
+    display: grid;
+    place-items: center;
+    place-items: center;
+    height: 60px;
     .nav-desktop {
       display: none;
     }
     .open-sidebar {
       display: block;
       cursor: pointer;
+    }
+
+    .leftHidden {
+      display: block;
+      li {
+        list-style: none;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        height: 40px;
+        width: 40px;
+        display: grid;
+        place-content: center;
+        align-items: center;
+
+        span.text {
+          display: none;
+        }
+      }
+    }
+    .logo {
+      border: initial;
     }
 
     .nav-movile {
@@ -157,13 +211,12 @@
       justify-content: left;
 
       background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-      /* width: 100%; */
-      /* height: 100%; */
-      background-color: #2a2b38;
+
+
       background-position: bottom center;
       background-repeat: no-repeat;
       background-size: 500%;
-
+      background-color: rgb(11, 11, 14);
       &.active {
         left: 0;
       }
@@ -176,6 +229,10 @@
           height: 40px;
           align-items: center;
           padding: 10px;
+
+          &:last-child{
+            display: none
+          }
         }
       }
     }

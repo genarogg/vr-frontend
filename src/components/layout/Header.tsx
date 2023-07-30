@@ -38,6 +38,29 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     $toggle("navMovile", "active")
   }
 
+  const login = () => {
+    return (
+      <>
+        {" "}
+        {autenticado ? (
+          <li>
+            <A to="/dashboard" css="user">
+              <Icono css="icon-user" />
+              {usuario.username}
+            </A>
+          </li>
+        ) : (
+          <li>
+            <A to="/" css="user">
+              <Icono css="icon-user" />
+              <span className="text">LOGIN</span>
+            </A>
+          </li>
+        )}
+      </>
+    )
+  }
+
   const navegacion = (css, id) => {
     return (
       <nav className={css} id={id}>
@@ -61,21 +84,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             </A>
           </li>
 
-          {autenticado ? (
-            <li>
-              <A to="/dashboard" css="user">
-                <Icono css="icon-user" />
-                {usuario.username}
-              </A>
-            </li>
-          ) : (
-            <li>
-              <A to="/" css="user">
-                <Icono css="icon-user" />
-                LOGIN
-              </A>
-            </li>
-          )}
+          {login()}
         </ul>
       </nav>
     )
@@ -99,7 +108,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
         </A>
       </div>
       {navegacion("nav-desktop", "navDesktop")}
-      <div className="leftHidden"></div>
+      <div className="leftHidden">{login()}</div>
     </header>
   )
 }
