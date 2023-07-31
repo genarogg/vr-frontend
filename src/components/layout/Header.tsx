@@ -60,7 +60,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             >
               <A to="#" css="user">
                 <Icono css="icon-user" />
-                {usuario.username}
+                <span className="userName">{usuario.username}</span>
               </A>
 
               <div className="opcionesUsuario">
