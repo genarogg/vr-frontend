@@ -8,6 +8,11 @@
   justify-items: center;
   margin-top: 100px;
   /*  gap: 60px; */
+
+  #nftBg {
+    position: fixed !important;
+  }
+
   .container-info-nfts {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,10 +106,8 @@
   }
 }
 
-
 @media screen and (max-width: 500px) {
-  .nft .container-info-nfts{
+  .nft .container-info-nfts {
     padding: 0 15px;
   }
-  
 }

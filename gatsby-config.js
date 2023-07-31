@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
+const { resolve } = require("path")
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -23,7 +25,20 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     /*  */
     /* `gatsby-env-variables`, */
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+    },
+
     `gatsby-plugin-image`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

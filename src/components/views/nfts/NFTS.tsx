@@ -22,7 +22,7 @@ const NFTS: React.FunctionComponent<NFTSProps> = () => {
     <>
       <Layout headerNofixed={true}>
         <div className="nft">
-          <Img type="bg" src={consultas().nftBg}>
+          <Img type="bg" src={consultas().nftBg} id="nftBg">
             {text(
               "¿Qué es un NFT?",
               `       

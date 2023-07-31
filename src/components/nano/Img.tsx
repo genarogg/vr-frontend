@@ -24,17 +24,18 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
 }: XimgProps) => {
   const imgSRC = getImage(src)
 
- /*  useEffect(() => {
-    
-  document
-   
-  }, []) */
-  
-
   if (type === "bg") {
     return (
       <>
-        <span>
+        <span
+          style={{
+            display: "inherit",
+            justifyContent: "inherit",
+            width: "inherit",
+            justifyItems: "inherit",
+            marginTop: "inherit",
+          }}
+        >
           <GatsbyImage
             //@ts-ignore
             image={imgSRC}

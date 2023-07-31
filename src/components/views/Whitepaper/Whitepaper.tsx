@@ -423,8 +423,8 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
   return (
     <>
       <Layout headerNofixed={true}>
-        <Img type="bg" src={consultas().nftBg} css="background">
-          <div className="whitepaper">
+        <div className="whitepaper">
+          <Img type="bg" src={consultas().nftBg} css="background" id="wpBg">
             <div className="infoPaper">
               <Asidebar id="bigAside" />
               <div className="containerInfo">
@@ -444,8 +444,8 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
                 <div dangerouslySetInnerHTML={{ __html: myInfo.info }}></div>
               </div>
             </div>
-          </div>
-        </Img>
+          </Img>
+        </div>
       </Layout>
     </>
   )
