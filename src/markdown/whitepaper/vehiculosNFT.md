@@ -6,7 +6,9 @@ title: '<span class="ico icon-automobile" id="" role="img" aria-label="sheep"></
 
 ## Vehiculos NFT
 
-<img src="/static/ef06fb84ea2fa5e2d5f2bb24af3d330e/3c750/cap3.webp"/>
+<div class="imgContainer">
+    <img src="/static/ef06fb84ea2fa5e2d5f2bb24af3d330e/3c750/cap3.webp"/>
+</div>
 
 El Jericó 2J, de la Escudería Automotriz DESINCRYP, es un vehículo Sport, que se clasifica
 como un Pony Cars, con motor en la parte trasera, dos puertas, con tracción trasera haciendo del auto un Monstruo en la pista.
@@ -36,7 +38,9 @@ Su nombre Jericó, se debe a que en la biblia se narra la historia de un profeta
           </tbody>
           </table>
 
-<img src="/static/6c621881bd2e15e15e8302891acb3362/7251b/cap2.webp"/>
+<div class="imgContainer">
+    <img src="/static/6c621881bd2e15e15e8302891acb3362/7251b/cap2.webp"/>
+</div>
 
 Es un vehículo Sport, diseñado exclusivo para la Escudería DESINCRYP, inspirado en el Mustang GT500KR, nuestro diseño cuenta con 4 Puertas pensando en la compañía que se pueda tener para disfrutar de las pistas, es una vehículo liviano, además cuenta con barras estabilizadoras, que garantizan la estabilidad del vehículo, su mayor atractivo es su frontal agresivo fabricado en Fibra de carbono, y un diseño aerodinámico que garantiza el agarre a la carretera, un traga aire en el capo que permite que el motor se mantenga fresco, las ruedas del Sparta PR1000 son de 20 Pulgadas permitiendo mejor desplazamiento en la carretera, cada línea de nuestro diseño está ubicada para que nuestro auto se mantenga en la pista.
 
@@ -44,8 +48,9 @@ En lo que tiene que ver con las revisiones técnicas Sparta PR1000, suspensión 
 
 Es imposible, escuchar el ruedo del motor y no voltear a mirar el Sparta PR1000 (Príncipe de las carreteras) su nombre es debido a que, en los tiempos de la antigüedad, en toda Europa los mejores gladiadores en el coliseo eran los de Sparta, y este vehículo es un gran luchador. Las Siglas ¨PR¨ se debe a la abreviatura de: Prince of Roads (Príncipe de las carreteras).
 
-<img src=""/>
-
+<div class="imgContainer">
+    <img src=""/>
+</div>
 La escudería Bstarll, trabajo durante unas 400 Horas hombres, para desarrollar de manera ejemplar este Crossover que, siendo la base de un auto deportivo, fue modificado hasta convertirlo en el diseño innovador, único y atractivo, que hoy presentamos a ustedes.
 
 Debajo del Capo, encontramos un extraordinario 4WD motor Coswort Bi Turbo, sin contar con un sobre alimentador, ya que la carrocería de carbono, no soportaría tanta velocidad de arranque y empuje que genera nuestro diseño, el Spoiler trasero, de este díselo es de metal y Polietileno resistente para dar mayor tracción en la parte trasera del vehículo, nuestro diseño frontal, agresivo e imponente, resguarda la vestía que mueve este vehículo.
@@ -68,9 +73,9 @@ Nuestro frontal, está diseñado para aferrarse a las carreteras y su diseño no
           </tr>
           </tbody>
           </table>
-
+<div class="imgContainer">
 <img src="/static/193711ba4e03f244d26095c1231b2c29/84af4/cap1.webp"/> VEHICULO Eros.
-
+</div>
 <table>
           <tbody>
           <tr>

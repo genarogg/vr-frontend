@@ -84,7 +84,7 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
                   <Icono css="icon-menu"></Icono>
                   <Asidebar id="sidebar" />
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: myInfo }}></div>
+                <div className="info" dangerouslySetInnerHTML={{ __html: myInfo }}></div>
               </div>
             </div>
           </Img>
