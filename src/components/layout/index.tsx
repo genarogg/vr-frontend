@@ -4,7 +4,8 @@ import "../../css/lib/icomoon/style.css"
 import Header from "./Header"
 import Footer from "./Footer"
 import AuthState from "../../context/autenticacion/authState"
-
+import SpinnerLoader from "./SpinnerLoader"
+import Qwelcome from "../../consultas/home/Qwelcome"
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -17,6 +18,12 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   return (
     <>
       <AuthState>
+        <SpinnerLoader
+          colorFondo="#fff"
+          colorBarra="#b03535"
+          logo={Qwelcome().spinner}
+          backgroundColors="#2d007e"
+        />
         <Header />
         {headerNofixed ? <div className="headerNoFixed"></div> : null}
         <main id="main" className="main">
@@ -31,7 +38,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 export function Head() {
   return (
     <>
-      {" "}
       <link
         rel="shortcut icon"
         href="/src/img/favicon.png"
