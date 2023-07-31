@@ -18,9 +18,10 @@ Es posible ganar premios en efectivo a través de las diferentes modalidades de 
 
 En las carreras PVP, lo apostado quedara distribuido de la siguiente manera:
 
-- 1 er lugar 40%
-- 2 do lugar 30 %
-- 3 de lugar 15 %
-- Plataforma 15 %
+- 🔹 1 er lugar 40%
+- 🔹 2 do lugar 30 %
+- 🔹 3 de lugar 15 %
+- 🔹 Plataforma 15 %
 
+<br/>
 En función de lo apostado en la inscripción de la carrera.
