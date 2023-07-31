@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?z5mlvh');
-  src:  url('fonts/icomoon.eot?z5mlvh#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?z5mlvh') format('truetype'),
-    url('fonts/icomoon.woff?z5mlvh') format('woff'),
-    url('fonts/icomoon.svg?z5mlvh#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3rbwm8');
+  src:  url('fonts/icomoon.eot?3rbwm8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3rbwm8') format('truetype'),
+    url('fonts/icomoon.woff?3rbwm8') format('woff'),
+    url('fonts/icomoon.svg?3rbwm8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -67,6 +67,9 @@
 .icon-user2:before {
   content: "\e920";
 }
+.icon-account_balance:before {
+  content: "\e927";
+}
 .icon-keyboard_arrow_left:before {
   content: "\e925";
 }
@@ -114,9 +117,6 @@
 }
 .icon-intersex:before {
   content: "\f224";
-}
-.icon-ethereum:before {
-  content: "\e91b";
 }
 .icon-ethereum:before {
   content: "\e91b";
