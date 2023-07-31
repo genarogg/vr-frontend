@@ -38,7 +38,7 @@
     }
   }
 }
-@media screen and (min-width: 1250px) {
+/* @media screen and (min-width: 1250px) {
   .welcome {
     .container {
       .activeForm {
@@ -46,7 +46,7 @@
       }
     }
   }
-}
+} */
 @media screen and (max-width: 1250px) {
   .welcome {
     &.active {
@@ -60,7 +60,7 @@
       grid-template-columns: 1fr;
       max-width: 99vw;
 
-      .activeForm {
+      /* .activeForm {
         position: absolute;
         bottom: 0;
         z-index: 1000;
@@ -89,7 +89,7 @@
         font-size: 20px;
         text-transform: uppercase;
         cursor: pointer;
-      }
+      } */
 
       .containerForm {
         position: fixed;

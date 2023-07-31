@@ -130,13 +130,18 @@ body {
 .google {
   color: #db4a39 !important;
 }
+
+.youtube {
+  color: #c4302b !important;
+}
 .instagram,
 .twitter,
 .linkedin,
 .github,
 .facebook,
 .google,
-.telegram {
+.telegram,
+.youtube {
   transition: $transicion600ms;
 
   &:hover {

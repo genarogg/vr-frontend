@@ -11,9 +11,7 @@ import {} from "./form/functions/$"
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
-  const openForm = () => {
-    $toggle("welcome", "active")
-  }
+ 
 
   const authContext = useContext(AuthContext)
   const { autenticado } = authContext
@@ -22,19 +20,17 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
     <>
       <div className={`welcome`} id="welcome">
         <Img type="bg" src={Qwelcome().bg} css="background">
-          <div className="container">
+          <div className="container" >
             <Img src={Qwelcome().logo} />
 
             {autenticado ? null : <MyForm />}
 
-            <button
-              onClick={() => {
-                openForm()
-              }}
+           {/*  <button
+              
               className="activeForm"
             >
               login
-            </button>
+            </button> */}
           </div>
         </Img>
       </div>
