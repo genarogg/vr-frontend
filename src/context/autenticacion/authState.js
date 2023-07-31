@@ -107,6 +107,7 @@ const AuthState = props => {
         msg: error.response.data.message,
         categoria: "alerta-error",
       }
+
       dispath({
         type: LOGIN_ERROR,
         payload: alerta,
@@ -116,6 +117,8 @@ const AuthState = props => {
 
   /* cierra la sesion del usuario */
   const cerrarSesion = () => {
+   
+    location.reload()
     dispath({
       type: CERRAR_SESION,
     })

@@ -48,7 +48,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     return (
       <>
         {" "}
-        {autenticado ? (
+        {autenticado && usuario ? (
           <>
             <li
               onClick={() => {
@@ -67,7 +67,11 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                       <A to="/dashboard">dashboard</A>
                     </li>
                     <li>
-                      <button onClick={()=>{cerrarSesion()}}>
+                      <button
+                        onClick={() => {
+                          cerrarSesion()
+                        }}
+                      >
                         <A to="#">cerrar sesion </A>
                       </button>
                     </li>
