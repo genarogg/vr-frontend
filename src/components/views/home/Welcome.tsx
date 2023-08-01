@@ -1,10 +1,7 @@
 import React, { useContext, FunctionComponent } from "react"
 import Qwelcome from "../../../consultas/home/Qwelcome"
-import A from "../../nano/A"
 import Img from "../../nano/Img"
-import { $toggle } from "../../../functions/$"
 import MyForm from "./form/MyForm"
-/* import consultas from "../../../consultas" */
 import AuthContext from "../../../context/autenticacion/authContext"
 
 
