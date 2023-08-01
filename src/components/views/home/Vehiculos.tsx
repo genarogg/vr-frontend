@@ -1,6 +1,4 @@
-import React, { useEffect } from "react"
-import Img from "../../nano/Img"
-import Qhome from "../../../consultas/home/Qhome"
+import React from "react"
 
 interface VehiculosProps {}
 
@@ -8,10 +6,6 @@ const widthVideo = 360
 const heightVideo = 202
 
 const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
-  useEffect(() => {
-  /*   document.getElementById("vehiculos")!.style.backgroundImage = "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)" */
-  }, [])
-
   return (
     <section className="vehiculos" id="vehiculos">
       {/* <Img type="bg" src={Qhome().bgVehiculos}> */}

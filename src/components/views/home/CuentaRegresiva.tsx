@@ -1,15 +1,5 @@
 import React, { FunctionComponent } from "react"
 
-//@ts-ignore
-import videoCuentaRegresiva from "../../../img/home/video/CUENTA-REGRESIVA.mp4"
-import Video from "../../nano/Video"
-/* import Section from "./Section" */
-import Img from "../../nano/Img"
-
-import Qhome from "../../../consultas/home/Qhome"
-
-import { $moveComponent } from "../../../functions/$"
-
 interface CuentaRegresivaProps {}
 
 const CuentaRegresiva: FunctionComponent<CuentaRegresivaProps> = () => {
@@ -24,17 +14,17 @@ const CuentaRegresiva: FunctionComponent<CuentaRegresivaProps> = () => {
       >
         <h2>YA ESTAMOS EN CUENTA REGRESIVA</h2>
         {/* <Img type="bg" src={Qhome().bgVideo} id="bgVideo"> */}
-          {/* <Video src={videoCuentaRegresiva} id="cuentaRegresivaVideo"></Video> */}
-          <div id="cuentaRegresivaVideo">
-            <iframe
-              className="yt"
-              src="https://www.youtube.com/embed/QhJ0sQHW4mk"
-              title="Vuelta Rápida Game."
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
+        {/* <Video src={videoCuentaRegresiva} id="cuentaRegresivaVideo"></Video> */}
+        <div id="cuentaRegresivaVideo">
+          <iframe
+            className="yt"
+            src="https://www.youtube.com/embed/QhJ0sQHW4mk"
+            title="Vuelta Rápida Game."
+            frameBorder="0"
+            allow="accelerometer; autoplay='true'; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         {/* </Img> */}
       </section>
     </>
