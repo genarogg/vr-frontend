@@ -9,7 +9,7 @@ const heightVideo = 202
 
 const Vehiculos: React.FunctionComponent<VehiculosProps> = () => {
   useEffect(() => {
-    document.getElementById("vehiculos")!.style.backgroundImage = "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)"
+  /*   document.getElementById("vehiculos")!.style.backgroundImage = "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)" */
   }, [])
 
   return (

@@ -18,12 +18,12 @@ const CuentaRegresiva: FunctionComponent<CuentaRegresivaProps> = () => {
       <section
         id="cuentaRegresiva"
         className="cuenta-regresiva"
-        onMouseMove={e => {
+        /* onMouseMove={e => {
           $moveComponent(e, "bgVideo")
-        }}
+        }} */
       >
         <h2>YA ESTAMOS EN CUENTA REGRESIVA</h2>
-        <Img type="bg" src={Qhome().bgVideo} id="bgVideo">
+        {/* <Img type="bg" src={Qhome().bgVideo} id="bgVideo"> */}
           {/* <Video src={videoCuentaRegresiva} id="cuentaRegresivaVideo"></Video> */}
           <div id="cuentaRegresivaVideo">
             <iframe
@@ -35,7 +35,7 @@ const CuentaRegresiva: FunctionComponent<CuentaRegresivaProps> = () => {
               allowFullScreen
             ></iframe>
           </div>
-        </Img>
+        {/* </Img> */}
       </section>
     </>
   )

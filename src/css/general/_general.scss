@@ -13,13 +13,14 @@ html {
 
 body {
   font-family: Lato;
-  background-color: #070b20;
+  background-color: #000;
   display: flex;
   font-family: $font;
   font-weight: normal;
   flex-wrap: wrap;
   min-height: inherit;
   width: 100%;
+  background-attachment: fixed;
 }
 
 div#gatsby-focus-wrapper,

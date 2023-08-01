@@ -14,10 +14,10 @@ import "swiper/css"
 interface PistasProps {}
 
 const Pistas: React.FunctionComponent<PistasProps> = () => {
-  useEffect(() => {
+/*   useEffect(() => {
     document.getElementById("pistas")!.style.backgroundImage =
       "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)"
-  }, [])
+  }, []) */
 
   return (
     <section id="pistas" className="pistas">

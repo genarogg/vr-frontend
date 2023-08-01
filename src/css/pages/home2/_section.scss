@@ -2,6 +2,8 @@ section {
   &.vehiculos,
   &.pistas,
   &.cuenta-regresiva {
+
+
     h2 {
       text-align: center;
       margin: 32px 0 42px 0;
@@ -16,7 +18,7 @@ section {
       text-align: justify;
       line-height: 28px;
       font-size: 18px;
-      backdrop-filter: blur(3px);
+      /* backdrop-filter: blur(3px); */
       text-shadow: 0 0 20px black;
     }
   }
@@ -49,11 +51,12 @@ section {
         );
       background-origin: border-box;
       background-clip: padding-box, border-box;
-      margin-bottom: 30px;
+  
       overflow: hidden;
       /* width: 50%; */
       position: relative;
       margin: 0 auto;
+      margin-bottom: 30px;
 
       &::after {
         content: "";
