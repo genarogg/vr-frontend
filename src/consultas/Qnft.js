@@ -19,7 +19,7 @@ const Qnft = () => {
           )
         }
       }
-      nftInfo: file(relativePath: { eq: "nft/queEsNFT.md" }) {
+      nftInfo: file(relativePath: { eq: "nft/collectionNFT.md" }) {
         remark: childMarkdownRemark {
           html
         }

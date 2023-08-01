@@ -79,22 +79,29 @@
 
       a {
         text-decoration: none;
-      }
+        overflow: hidden;
 
-      span {
-        padding: 10px;
-        background-color: #fff;
-        color: #282828;
-        transition: $transicion600ms;
-        &:hover {
-          background-color: #4285f4;
-        }
+        height: 30px;
+        width: 42px;
+        display: grid;
+        place-content: center;
+        place-items: center;
+
         &:first-child {
           border-radius: 15px 0 0 0;
         }
 
         &:last-child {
           border-radius: 0 15px 0 0;
+        }
+      }
+
+      span {
+        background-color: #fff;
+        transition: $transicion600ms;
+        padding: 29px;
+        &:hover {
+          background-color: #4285f4;
         }
       }
     }

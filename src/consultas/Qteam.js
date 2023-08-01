@@ -1,41 +1,38 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 const Qteam = () => {
-  const { bg, genarogg } = useStaticQuery(graphql`
+  const { bg, igmGenarogg, infoGenarogg } = useStaticQuery(graphql`
     query {
       bg: file(relativePath: { eq: "home/team/bg-team.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(
-            width: 1920
-            height: 1080
-            
-            
-            quality: 100
-          )
+          gatsbyImageData(width: 1920, height: 1080, quality: 100)
         }
       }
 
-      genarogg: file(relativePath: { eq: "home/team/genarogg.png" }) {
+      igmGenarogg: file(relativePath: { eq: "home/team/genarogg.png" }) {
         sharp: childImageSharp {
           gatsbyImageData(width: 350)
+        }
+      }
+      infoGenarogg: file(relativePath: { eq: "home/team/genarogg.md" }) {
+        remark: childMarkdownRemark {
+          htmlAst
+          frontmatter {
+            nombre
+            email
+            linkedin
+            redAlternativa
+          }
         }
       }
     }
   `)
 
-  const team = [
-    genarogg.sharp,
-    genarogg.sharp,
-    genarogg.sharp,
-    genarogg.sharp,
-    genarogg.sharp,
-    genarogg.sharp,
-    genarogg.sharp,
-  ]
+  const team = [{ img: igmGenarogg.sharp, info: infoGenarogg }]
 
   const data = {
-    team,
     bg: bg.sharp,
+    team,
   }
 
   return data
