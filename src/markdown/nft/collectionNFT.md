@@ -1,4 +1,4 @@
-## NFT´S de Desincryp
+## NFT´S Desincryp
 
 ¡La primera colección de NFT's de Desincryp te ofrece una experiencia única!
 
