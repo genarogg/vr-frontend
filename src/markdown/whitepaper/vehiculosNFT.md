@@ -21,23 +21,6 @@ En la parte trasera encontramos un espectacular Spoiler de fibra de carbono, que
 
 Su nombre Jericó, se debe a que en la biblia se narra la historia de un profeta que teniendo fe hizo que Dios hiciera temblar la tierra en Jericó, al burlarse de los Falsos profetas, el 2J se le otorga a Juan Manuel y Juan Luis, a quienes merecemos este hermoso ejemplar de Belleza y velocidad.
 
-<table>
-          <tbody>
-          <tr>
-          <td></td>
-          <td>Velocidad Máxima</td>
-          <td>Segundos 0-100</td>
-          <td>Clasificación</td>
-          </tr>
-          <tr>
-          <td>Jericó 2J</td>
-          <td>295 KM</td>
-          <td>3</td>
-          <td>Sport</td>
-          </tr>
-          </tbody>
-          </table>
-
 <div class="imgContainer">
     <img src="/static/6c621881bd2e15e15e8302891acb3362/7251b/cap2.webp"/>
 </div>
@@ -51,44 +34,22 @@ Es imposible, escuchar el ruedo del motor y no voltear a mirar el Sparta PR1000 
 <div class="imgContainer">
     <img src=""/>
 </div>
+El Grigora es un modelo inspirado en el diseño del Ford Maverick de 1970, es un vehículo 2 puertas con rines de 18 Pulgadas, en el Capo cuenta con un diseño que le permite la circulación de aire fresco para refrescar el potente motor, el mismo que le permite tener una excelente tracción en sus dos ejes traseros, y desarrollar una excelente maniobrabilidad en las curvas.
+
+El nombre de Grigora viene de la traducción del griego Veloz… y es que así es el Grigora un auto compacto y veloz, con este vehículo se puede ganar en cualquier pista, sin importar cuál sea su contrincante.
+La potente arranada del Grigora, dejara a más de uno sorprendidos, cuando sean desplazados y queden solo con el reflejo de sus luces traseras fijadas en su parabrisas, porque el potente diseño del Grigora es inigualable.
+
+Nuestro frontal, está diseñado para aferrarse a las carreteras y su diseño no está hecho para mirar las luces traseras de ningún vehículo rival, las demás escuderías quisieran tener este diseño en su equipo.
+
+<div class="imgContainer">
+    <img src=""/>
+</div>
 La escudería Bstarll, trabajo durante unas 400 Horas hombres, para desarrollar de manera ejemplar este Crossover que, siendo la base de un auto deportivo, fue modificado hasta convertirlo en el diseño innovador, único y atractivo, que hoy presentamos a ustedes.
 
 Debajo del Capo, encontramos un extraordinario 4WD motor Coswort Bi Turbo, sin contar con un sobre alimentador, ya que la carrocería de carbono, no soportaría tanta velocidad de arranque y empuje que genera nuestro diseño, el Spoiler trasero, de este díselo es de metal y Polietileno resistente para dar mayor tracción en la parte trasera del vehículo, nuestro diseño frontal, agresivo e imponente, resguarda la vestía que mueve este vehículo.
 
 Nuestro frontal, está diseñado para aferrarse a las carreteras y su diseño no está hecho para mirar las luces traseras de ningún vehículo rival, las demás escuderías quisieran tener este diseño en su equipo.
 
-<table>
-          <tbody>
-          <tr>
-          <td></td>
-          <td>Velocidad Máxima</td>
-          <td>Segundos 0-100</td>
-          <td>Clasificación</td>
-          </tr>
-          <tr>
-          <td>Sparta PR1000</td>
-          <td>285 KM</td>
-          <td>3,3</td>
-          <td>Sport</td>
-          </tr>
-          </tbody>
-          </table>
 <div class="imgContainer">
 <img src="/static/193711ba4e03f244d26095c1231b2c29/84af4/cap1.webp"/> VEHICULO Eros.
 </div>
-<table>
-          <tbody>
-          <tr>
-          <td width="146"></td>
-          <td width="170">Velocidad Máxima</td>
-          <td width="152">Segundos 0-100</td>
-          <td width="120">Clasificación</td>
-          </tr>
-          <tr>
-          <td width="146">NSX+ SPORT</td>
-          <td width="170">300 KM</td>
-          <td width="152">2.9</td>
-          <td width="120">Sport</td>
-          </tr>
-          </tbody>
-          </table>

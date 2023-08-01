@@ -44,7 +44,11 @@
       }
 
       p {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-family: Lato;
+        font-weight: 400;
+        line-height: 20px;
+        font-size: 16px;
       }
     }
 
@@ -109,5 +113,9 @@
 @media screen and (max-width: 500px) {
   .nft .container-info-nfts {
     padding: 0 15px;
+  }
+  .nft .contaienerRarible{
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 }

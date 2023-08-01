@@ -22,9 +22,7 @@ const AuthState = props => {
     return " "
   } */
 
-  useEffect(() => {
-    initialState.token = localStorage.getItem("token")
-  }, [])
+  
 
   const initialState = {
     token: "",
@@ -33,7 +31,10 @@ const AuthState = props => {
     mensaje: null,
     cargando: true,
   }
-
+  useEffect(() => {
+    initialState.token = localStorage.getItem("token")
+  }, [])
+  
   const [state, dispath] = useReducer(authReducer, initialState)
 
   /* Funciones */

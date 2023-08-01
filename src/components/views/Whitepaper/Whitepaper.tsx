@@ -8,6 +8,8 @@ import consultas from "../../../consultas"
 import Qwhitepaper from "../../../consultas/Qwhitepaper"
 import { $classList, $toggle } from "../../../functions/$"
 
+import { v4 as uuidv4 } from "uuid"
+
 interface WhitepaperProps {}
 
 const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
@@ -33,20 +35,18 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
             <ul>
               {Qwhitepaper().secciones.map(seccion => {
                 return (
-                  <>
-                    <li>
-                      <button
-                        onClick={() => {
-                          setMyInfo(seccion.info)
-                        }}
-                      >
-                        <a
-                          href="#"
-                          dangerouslySetInnerHTML={{ __html: seccion.titulo }}
-                        ></a>
-                      </button>
-                    </li>
-                  </>
+                  <li key={uuidv4()}>
+                    <button
+                      onClick={() => {
+                        setMyInfo(seccion.info)
+                      }}
+                    >
+                      <a
+                        href="#"
+                        dangerouslySetInnerHTML={{ __html: seccion.titulo }}
+                      ></a>
+                    </button>
+                  </li>
                 )
               })}
             </ul>

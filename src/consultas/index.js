@@ -4,7 +4,6 @@ const Consultas = () => {
   const {
     logoHome,
     logo,
-    bandera,
     pista1,
     pista2,
     pista3,
@@ -15,17 +14,11 @@ const Consultas = () => {
     pista8,
     pit,
     nftBg,
-    nftSel,
-    nftArt,
+
     vueltarapida,
     cap1,
     cap2,
     cap3,
-    escuderia1,
-    escuderia2,
-    escuderia3,
-    escuderia4,
-    escuderia5,
   } = useStaticQuery(graphql`
     query {
       logoHome: file(relativePath: { eq: "home/logo.png" }) {
@@ -42,11 +35,6 @@ const Consultas = () => {
         }
       }
 
-      bandera: file(relativePath: { eq: "home/fla.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData(width: 200, quality: 100)
-        }
-      }
       pista1: file(relativePath: { eq: "home/mapas/pista1.jpg" }) {
         sharp: childImageSharp {
           gatsbyImageData(width: 360, quality: 90)
@@ -102,27 +90,6 @@ const Consultas = () => {
         }
       }
 
-      nftSel: file(relativePath: { eq: "nfts/nft-sel.png" }) {
-        sharp: childImageSharp {
-          gatsbyImageData(
-            width: 500
-            height: 500
-
-            quality: 100
-          )
-        }
-      }
-      nftArt: file(relativePath: { eq: "nfts/nft-art.png" }) {
-        sharp: childImageSharp {
-          gatsbyImageData(
-            width: 500
-            height: 500
-
-            quality: 100
-          )
-        }
-      }
-
       vueltarapida: file(relativePath: { eq: "whitepaper/vueltarapida.jpg" }) {
         sharp: childImageSharp {
           gatsbyImageData
@@ -139,32 +106,6 @@ const Consultas = () => {
         }
       }
       cap3: file(relativePath: { eq: "whitepaper/cap3.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-
-      escuderia1: file(relativePath: { eq: "whitepaper/escuderia1.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      escuderia2: file(relativePath: { eq: "whitepaper/escuderia2.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      escuderia3: file(relativePath: { eq: "whitepaper/escuderia3.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      escuderia4: file(relativePath: { eq: "whitepaper/escuderia4.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      escuderia5: file(relativePath: { eq: "whitepaper/escuderia5.jpg" }) {
         sharp: childImageSharp {
           gatsbyImageData
         }
@@ -187,21 +128,15 @@ const Consultas = () => {
     logoHome: logoHome.sharp,
     logo: logo.sharp,
     logoOriginal: logo.sharp.original.src,
-    bandera: bandera.sharp,
+
     mapas,
     pit: pit.sharp,
     nftBg: nftBg.sharp,
-    nftSel: nftSel.sharp,
-    nftArt: nftArt.sharp,
+
     vueltarapida,
     cap1,
     cap2,
     cap3,
-    escuderia1,
-    escuderia2,
-    escuderia3,
-    escuderia4,
-    escuderia5,
   }
 
   return data
