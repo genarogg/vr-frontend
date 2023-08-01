@@ -3,9 +3,10 @@ import "../../css/style.scss"
 import "../../css/lib/icomoon/style.css"
 import Header from "./Header"
 import Footer from "./Footer"
-import AuthState from "../../context/autenticacion/authState"
+
 import SpinnerLoader from "./SpinnerLoader"
 import Qwelcome from "../../consultas/home/Qwelcome"
+import AuthProvider from "./AuthProvider "
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -17,7 +18,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 }) => {
   return (
     <>
-      <AuthState>
+      <AuthProvider>
         <SpinnerLoader
           colorFondo="#fff"
           colorBarra="#b03535"
@@ -30,7 +31,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
           {children}
         </main>
         <Footer />
-      </AuthState>
+      </AuthProvider>
     </>
   )
 }

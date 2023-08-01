@@ -6,15 +6,16 @@ import { $toggle } from "../../../functions/$"
 import MyForm from "./form/MyForm"
 /* import consultas from "../../../consultas" */
 import AuthContext from "../../../context/autenticacion/authContext"
-import {} from "./form/functions/$"
+
 
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
  
 
-  const authContext = useContext(AuthContext)
-  const { autenticado } = authContext
+
+  const { autenticado } = useContext(AuthContext)
+
 
   return (
     <>
