@@ -1,5 +1,5 @@
 ---
-nombre: "Genaonzalez"
+nombre: "Genaro gonzalez"
 email: "genarrogg@gmail.com"
 linkedin: "https://linkedin.com/in/genarogg"
 

@@ -1,9 +1,9 @@
 ---
-nombre: "Genaonzalez"
-email: "genarrogg@gmail.com"
-linkedin: "https://linkedin.com/in/genarogg"
+nombre: "Ricardo Graterol"
+email: "ricaryangi@gmail.com"
+linkedin: "https://www.linkedin.com/in/ricardo-jose-graterol-andrade-60b98725b/"
 
-redAlternativa: "https://xiana.live/portafolio , icon-database "
+redAlternativa: "https://twitter.com/TecnoCriptoNft , icon-twitter "
 ---
 
-Es un individuo apasionado por la tecnología y los videojuegos que ha abrazado el mundo emergente de los tokens no fungibles (NFT) y la economía basada en la web3. Además de ser un desarrollador hábil, este individuo también es un apasionado gamer que disfruta tanto de jugar como de crear juegos NFT.
+es un individuo apasionado por la tecnología y los videojuegos que ha abrazado el mundo emergente de los tokens no fungibles (NFT) y la economía basada en la web3. Además de ser un desarrollador hábil, este individuo también es un apasionado gamer que disfruta tanto de jugar como de crear juegos NFT.

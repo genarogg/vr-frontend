@@ -1,9 +1,11 @@
 ---
-nombre: "Genaonzalez"
-email: "genarrogg@gmail.com"
-linkedin: "https://linkedin.com/in/genarogg"
+nombre: " Juan Luis Piña"
+email: "desincryp@gmail.com"
+linkedin: "www.linkedin.com/in/juan-luis-piña-guanarez-02b982270"
 
-redAlternativa: "https://xiana.live/portafolio , icon-world"
+redAlternativa: "https://instagram.com/juanvooce01, icon-instagram"
 ---
 
-Soy un profesional en desarrollo frontend con una amplia experiencia en programación desde los 18 años. Mi especialidad es javascript con reactjs, y he trabajado con diversas organizaciones como la comunidad de programadores y comfeco. Además, he sido reconocido como contribuyente en Arctic Code Vault Contributor de github.
+Joven emprendedor Venezolano enfocado en la construcción de una economía sólida basada en Criptomonedas, involucrado en la investigación y desarrollo de Metaverso, Web3 y Blockchain, locutor, presentador y animador de eventos.
+
+En la actualidad apuesta en la construcción de una industria Gamer descentralizada.

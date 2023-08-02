@@ -31,16 +31,16 @@ const Team: React.FunctionComponent<TeamProps> = () => {
           <Img src={img} />
           <h3 className="name">{nombre}</h3>
 
-          <p
+          <div
             className="description"
             dangerouslySetInnerHTML={{
-              __html: info.remark.htmlAst.children[0].children[0].value,
+              __html: info.remark.html,
             }}
-          ></p>
+          ></div>
           <div className="contacto">
-            <A to={email} type="a">
+            <A to={"mailto:" + email} type="a">
               <Icono css=" icon-mail github"></Icono>
-            </A>{" "}
+            </A>
             <A to={linkedin} type="a">
               <Icono css=" icon-linkedin linkedin"></Icono>
             </A>

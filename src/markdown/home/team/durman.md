@@ -1,9 +1,11 @@
 ---
-nombre: "Genaonzalez"
+nombre: "Durman Sierra"
 email: "genarrogg@gmail.com"
-linkedin: "https://linkedin.com/in/genarogg"
+linkedin: "https://www.linkedin.com/in/durman-sierra-a17082285?trk=contact-info"
 
-redAlternativa: "https://xiana.live/portafolio , icon-world"
+redAlternativa: "https://twitter.com/durmansierra , icon-twitter"
 ---
 
-Soy un profesional en desarrollo frontend con una amplia experiencia en programación desde los 18 años. Mi especialidad es javascript con reactjs, y he trabajado con diversas organizaciones como la comunidad de programadores y comfeco. Además, he sido reconocido como contribuyente en Arctic Code Vault Contributor de github.
+Ing mecánico e innovador tecnológico, explorando avances en web 3 y NFTs. Como apasionado creador de videojuegos, combino habilidades técnicas e imaginación para diseñar mundos virtuales.
+
+Mi misión es fusionar experiencia en ingeniería con el emocionante futuro del entretenimiento digital.s

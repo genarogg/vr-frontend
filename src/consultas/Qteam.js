@@ -30,7 +30,7 @@ const Qteam = () => {
       }
       infoGenarogg: file(relativePath: { eq: "home/team/genarogg.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -39,14 +39,14 @@ const Qteam = () => {
           }
         }
       }
-      imgDurman: file(relativePath: { eq: "home/team/genarogg.png" }) {
+      imgDurman: file(relativePath: { eq: "home/team/durman.png" }) {
         sharp: childImageSharp {
           gatsbyImageData(width: 350)
         }
       }
       infoDurman: file(relativePath: { eq: "home/team/durman.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -62,7 +62,7 @@ const Qteam = () => {
       }
       infoJairo: file(relativePath: { eq: "home/team/jairo.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -78,7 +78,7 @@ const Qteam = () => {
       }
       infoLuis: file(relativePath: { eq: "home/team/luis.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -87,14 +87,14 @@ const Qteam = () => {
           }
         }
       }
-      imgRicardo: file(relativePath: { eq: "home/team/genarogg.png" }) {
+      imgRicardo: file(relativePath: { eq: "home/team/ricardo.png" }) {
         sharp: childImageSharp {
           gatsbyImageData(width: 350)
         }
       }
       infoRicardo: file(relativePath: { eq: "home/team/ricardo.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -103,14 +103,14 @@ const Qteam = () => {
           }
         }
       }
-      imgJuan: file(relativePath: { eq: "home/team/genarogg.png" }) {
+      imgJuan: file(relativePath: { eq: "home/team/juan.png" }) {
         sharp: childImageSharp {
           gatsbyImageData(width: 350)
         }
       }
       infoJuan: file(relativePath: { eq: "home/team/juan.md" }) {
         remark: childMarkdownRemark {
-          htmlAst
+          html
           frontmatter {
             nombre
             email
@@ -126,8 +126,14 @@ const Qteam = () => {
     { img: imgGenarogg.sharp, info: infoGenarogg },
     { img: imgDurman.sharp, info: infoDurman },
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgLuis.sharp, info: infoLuis },
     { img: imgRicardo.sharp, info: infoRicardo },
+    { img: imgJuan.sharp, info: infoJuan },
+    /*  */
+    { img: imgGenarogg.sharp, info: infoGenarogg },
+    { img: imgDurman.sharp, info: infoDurman },
+    { img: imgJairo.sharp, info: infoJairo },
+    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgLuis.sharp, info: infoLuis }, */
     { img: imgJuan.sharp, info: infoJuan },
   ]
 

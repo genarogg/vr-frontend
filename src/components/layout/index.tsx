@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import "../../css/style.scss"
 import "../../css/lib/icomoon/style.css"
 import Header from "./Header"
@@ -6,7 +6,7 @@ import Footer from "./Footer"
 
 import SpinnerLoader from "./SpinnerLoader"
 import Qwelcome from "../../consultas/home/Qwelcome"
-import AuthProvider from "./AuthProvider "
+import AuthState from "../../context/autenticacion/authState"
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -18,7 +18,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 }) => {
   return (
     <>
-      <AuthProvider>
+      <AuthState>
         <SpinnerLoader
           colorFondo="#fff"
           colorBarra="#b03535"
@@ -31,7 +31,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
           {children}
         </main>
         <Footer />
-      </AuthProvider>
+      </AuthState>
     </>
   )
 }
