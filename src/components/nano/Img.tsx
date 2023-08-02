@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export interface XimgProps {
+export interface ImgProps {
   src: any
   alt?: any
   type?: string
@@ -12,7 +12,7 @@ export interface XimgProps {
   styles?: object
 }
 
-const Ximg: React.FunctionComponent<XimgProps> = ({
+const Img: React.FunctionComponent<ImgProps> = ({
   src,
   alt = "Xiana by: Genaro Gonzalez",
   type,
@@ -21,7 +21,7 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
   tag = "section",
   children,
   styles,
-}: XimgProps) => {
+}: ImgProps) => {
   const imgSRC = getImage(src)
 
   if (type === "bg") {
@@ -35,6 +35,7 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
             justifyItems: "inherit",
             marginTop: "inherit",
           }}
+          className={css}
         >
           <GatsbyImage
             //@ts-ignore
@@ -73,4 +74,4 @@ const Ximg: React.FunctionComponent<XimgProps> = ({
   //@ts-ignore
   return <GatsbyImage image={imgSRC} alt={alt} className={css} id={id} />
 }
-export default Ximg
+export default Img

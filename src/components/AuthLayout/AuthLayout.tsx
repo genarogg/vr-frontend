@@ -13,7 +13,7 @@ const AuthLayout: FunctionComponent<AuthLayoutProps> = ({ children }) => {
     usuarioAutenticado()
   }, [])
 
-  return <>{autenticado && usuario ? children : <Welcome />}</>
+  return <>{autenticado && usuario ? <>{children}</> : <Welcome />}</>
 }
 
 export default AuthLayout

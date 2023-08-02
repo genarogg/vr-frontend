@@ -9,11 +9,11 @@ interface RutaProtegidaProps {
   children?: any
 }
 
-const RutaProtegida: FunctionComponent<RutaProtegidaProps> = () => {
+const RutaProtegida: FunctionComponent<RutaProtegidaProps> = ({ children }) => {
   return (
     <>
       <Layout>
-        <AuthLayout></AuthLayout>
+        <AuthLayout>{children}</AuthLayout>
       </Layout>
     </>
   )

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const Qwhitepaper = () => {
+const Qinfo = () => {
   const {
     historia,
     generoDelVideoJuego,
@@ -118,4 +118,4 @@ const Qwhitepaper = () => {
   return data
 }
 
-export default Qwhitepaper
+export default Qinfo

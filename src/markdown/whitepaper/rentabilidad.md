@@ -16,7 +16,7 @@ En la modalidad contra reloj, se establecerá un límite de tiempo para completa
 
 Es posible ganar premios en efectivo a través de las diferentes modalidades de competencia. Sin embargo, para participar se requiere pagar una inscripción, lo que significa que puede haber un costo involucrado. Por lo tanto, es importante considerar cuidadosamente el costo de la inscripción y calcular el potencial de ganancias antes de decidir participar en cada competencia.
 
-En las carreras PVP, lo apostado quedara distribuido de la siguiente manera:
+En las carreras PVE, lo apostado quedara distribuido de la siguiente manera:
 
 - 🔹 1 er lugar 40%
 - 🔹 2 do lugar 30 %

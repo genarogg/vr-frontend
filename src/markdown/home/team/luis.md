@@ -1,5 +1,5 @@
 ---
-nombre: "Genaonzalez"
+nombre: "Luis Chavez"
 email: "genarrogg@gmail.com"
 linkedin: "https://linkedin.com/in/genarogg"
 

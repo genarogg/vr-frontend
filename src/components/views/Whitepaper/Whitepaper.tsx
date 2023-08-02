@@ -5,7 +5,7 @@ import Icono from "../../nano/Icono"
 import Layout from "../../layout"
 import consultas from "../../../consultas"
 //@ts-ignore
-import Qwhitepaper from "../../../consultas/Qwhitepaper"
+import Qinfo from "../../../consultas/whitepaper/Qinfo"
 import { $classList, $toggle } from "../../../functions/$"
 
 import { v4 as uuidv4 } from "uuid"
@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from "uuid"
 interface WhitepaperProps {}
 
 const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
-  const [myInfo, setMyInfo] = useState(Qwhitepaper().secciones[0].info)
+  const [myInfo, setMyInfo] = useState(Qinfo().secciones[0].info)
 
   const activeSidebar = () => {
     $toggle("openSiderbar", "active")
@@ -33,7 +33,7 @@ const Whitepaper: React.FunctionComponent<WhitepaperProps> = () => {
             }}
           >
             <ul>
-              {Qwhitepaper().secciones.map(seccion => {
+              {Qinfo().secciones.map(seccion => {
                 return (
                   <li key={uuidv4()}>
                     <button

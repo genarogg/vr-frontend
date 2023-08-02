@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import Img from "../nano/Img"
+import { $contain } from "../views/home/form/functions/$"
 
 export interface spinnerLoaderProps {
   type?: string
@@ -85,11 +86,15 @@ const SpinnerLoader: React.FunctionComponent<spinnerLoaderProps> = ({
   useEffect(() => {
     // Descomentar para quitar el spinner
     try {
-      document.getElementById("spinner")!.style.visibility = "hidden"
+       setTimeout(() => {
+        document.getElementById("spinner")!.style.visibility = "hidden"
 
-      document.getElementById("spinner")!.style.opacity = "0"
+        document.getElementById("spinner")!.style.opacity = "0"
 
-      document.querySelector("html")!.style.overflow = "initial"
+        document.querySelector("html")!.style.overflow = "initial"
+      }, 600)
+
+    
     } catch (error) {}
   }, [])
 

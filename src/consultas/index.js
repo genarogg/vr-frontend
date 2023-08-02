@@ -16,9 +16,6 @@ const Consultas = () => {
     nftBg,
 
     vueltarapida,
-    cap1,
-    cap2,
-    cap3,
   } = useStaticQuery(graphql`
     query {
       logoHome: file(relativePath: { eq: "home/logo.png" }) {
@@ -95,21 +92,6 @@ const Consultas = () => {
           gatsbyImageData
         }
       }
-      cap1: file(relativePath: { eq: "whitepaper/cap1.png" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      cap2: file(relativePath: { eq: "whitepaper/cap2.png" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
-      cap3: file(relativePath: { eq: "whitepaper/cap3.jpg" }) {
-        sharp: childImageSharp {
-          gatsbyImageData
-        }
-      }
     }
   `)
 
@@ -132,11 +114,7 @@ const Consultas = () => {
     mapas,
     pit: pit.sharp,
     nftBg: nftBg.sharp,
-
     vueltarapida,
-    cap1,
-    cap2,
-    cap3,
   }
 
   return data

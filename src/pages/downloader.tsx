@@ -1,14 +1,14 @@
 import React from "react"
 
 //@ts-ignore
-import RutaProtegida from "../components/AuthLayout/RutaProtegida"
+import Downloader from "../components/views/downloader/Downloader"
 
 interface downloaderProps {}
 
 const downloader: React.FunctionComponent<downloaderProps> = () => {
   return (
     <>
-      <RutaProtegida></RutaProtegida>
+      <Downloader></Downloader>
     </>
   )
 }
