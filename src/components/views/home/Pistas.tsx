@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { v4 as uuidv4 } from "uuid"
 
 import Img from "../../nano/Img"
-import consultas from "../../../consultas"
+import Qpistas from "../../../consultas/home/Qpistas"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -14,7 +14,7 @@ import "swiper/css"
 interface PistasProps {}
 
 const Pistas: React.FunctionComponent<PistasProps> = () => {
-/*   useEffect(() => {
+  /*   useEffect(() => {
     document.getElementById("pistas")!.style.backgroundImage =
       "url(/static/patter-5f6e8d94e6915f1cb28c320ff9961c45.png)"
   }, []) */
@@ -46,7 +46,6 @@ const Pistas: React.FunctionComponent<PistasProps> = () => {
         effect="fade"
         speed={3000}
         spaceBetween={0}
-        
         pagination={{
           clickable: true,
         }}
@@ -72,7 +71,7 @@ const Pistas: React.FunctionComponent<PistasProps> = () => {
         modules={[Autoplay]}
         className="mySwiper"
       >
-        {consultas().mapas.map(mapa => {
+        {Qpistas().mapas.map(mapa => {
           return (
             <SwiperSlide key={uuidv4()}>
               <div className="sliderContariner">
