@@ -14,41 +14,90 @@
     place-items: center;
     place-content: center;
 
-    .card {
-      $tamanoH: 500px;
-      width: 360px;
-      max-width: 95vw;
-      height: $tamanoH;
-      min-height: $tamanoH;
-      max-height: $tamanoH;
-      border: 1px solid #fff;
-      clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
-      background-color: #282828;
+    .containerCard {
       position: relative;
 
-      place-content: center;
-      display: grid;
-      place-items: center;
-/* 
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-      background-position: bottom center;
-      background-repeat: no-repeat;
-      background-size: 300%;
-      align-self: center; */
-
-
-   /*    display: flex; */
-      -webkit-backdrop-filter: blur(28px);
-      backdrop-filter: blur(28px);
-      border-radius: 15px;
-      background-color: rgba(11, 11, 14, 0.3);
-
-      button {
+      .gatsby-image-wrapper {
         position: absolute;
-        bottom: 10px;
+        z-index: 1000;
+        top: -39px;
+      }
+
+      .card {
+        $tamanoH: 500px;
+        width: 360px;
+        max-width: 95vw;
+        height: $tamanoH;
+        min-height: $tamanoH;
+        max-height: $tamanoH;
         border: 1px solid #fff;
-        padding: 10px 20px;
-        border-radius: 10px;
+        clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+        background-color: #282828;
+        position: relative;
+
+        place-content: center;
+        display: grid;
+        place-items: center;
+
+        -webkit-backdrop-filter: blur(28px);
+        backdrop-filter: blur(28px);
+        border-radius: 15px;
+        background-color: rgba(11, 11, 14, 0.3);
+        * {
+          transition: $transicion600ms;
+        }
+
+        &.android {
+          border: 6px solid #3dda88;
+
+          background-color: rgba(#3dda88, 0.2);
+
+          button {
+            border: 2px solid #3dda88;
+
+            &:hover {
+              background-color: rgba(#3dda88, 0.5);
+            }
+          }
+        }
+
+        &.windows {
+          border: 6px solid #5ab8f8;
+
+          background-color: rgba(#5ab8f8, 0.2);
+
+          button {
+            border: 2px solid #5ab8f8;
+
+            &:hover{
+              background-color: rgba(#5ab8f8, 0.5);
+            }
+          }
+        }
+
+        h2 {
+          margin-top: 90px;
+          /*  margin-bottom: 10px; */
+        }
+        p {
+          padding: 10px;
+          width: 90%;
+          line-height: 20px;
+          font-size: 16px;
+        }
+        button {
+          position: absolute;
+          bottom: 20px;
+          border: 1px solid #fff;
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
       }
     }
   }
