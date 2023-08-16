@@ -14,10 +14,10 @@ const Downloader: FunctionComponent<DownloaderProps> = () => {
     return (
       <>
         {console.log(info)}
-        <div className="containerCard">
+        <div className={`containerCard ${titulo}`}>
           <Img src={img} />
 
-          <div className={`card ${titulo}`}>
+          <div className={`card`}>
             <h2>{titulo}</h2>
             <p dangerouslySetInnerHTML={{ __html: info }}></p>
             <button>
