@@ -1,7 +1,7 @@
 import React from "react"
 
 //@ts-ignore
-import Demo from "../../components/views/demo/demo"
+import Demo from "../../components/views/demo/Demo"
 
 interface demoProps {}
 
