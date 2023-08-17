@@ -1,0 +1,14 @@
+.gameplay {
+  display: grid;
+  place-content: center;
+  place-items: center;
+
+  iframe {
+    border-radius: 20px;
+    background-color: #ffffff63;
+    border: 1px solid #eeb4a9;
+    backdrop-filter: blur(4px);
+    position: relative;
+    z-index: 1000000000000;
+  }
+}

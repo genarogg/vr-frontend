@@ -1,6 +1,6 @@
 ---
 titulo: "android"
-link: "https://link.com"
+link: "https://demovueltarapida.netlify.app/descargas/android/vueltarapida.apk"
 tipo: "descargar"
 ---
 

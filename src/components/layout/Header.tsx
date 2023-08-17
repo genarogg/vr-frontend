@@ -67,6 +67,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                 <nav>
                   <ul>
                     <li>
+                      <A to="/demo">demo</A>
+                    </li>
+                    <li>
                       <A to="/dashboard">dashboard</A>
                     </li>
                     <li>

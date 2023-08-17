@@ -1,6 +1,6 @@
 ---
 titulo: "windows"
-link: "https://link.com"
+link: "https://demovueltarapida.netlify.app/descargas/windows/vueltarapida.exe"
 tipo: "descargar"
 ---
 

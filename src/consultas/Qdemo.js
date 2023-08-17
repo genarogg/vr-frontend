@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const Qdownloader = () => {
+const Qdemo = () => {
   const {
     bg,
     imgAndroid,
@@ -83,4 +83,4 @@ const Qdownloader = () => {
   return data
 }
 
-export default Qdownloader
+export default Qdemo

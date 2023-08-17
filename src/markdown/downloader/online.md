@@ -1,6 +1,6 @@
 ---
 titulo: "online"
-link: "https://link.com"
+link: "/demo/gameplay"
 tipo: "Jugar Ahora"
 ---
 

@@ -1,13 +1,13 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useEffect } from "react"
 import RutaProtegida from "../../AuthLayout/RutaProtegida"
 import Img from "../../nano/Img"
-import Qdownloader from "../../../consultas/Qdownloader"
+import Qdemo from "../../../consultas/Qdemo"
 import { v4 as uuidv4 } from "uuid"
 import A from "../../nano/A"
 
-interface DownloaderProps {}
+interface DemoProps {}
 
-const Downloader: FunctionComponent<DownloaderProps> = () => {
+const Demo: FunctionComponent<DemoProps> = () => {
   const Card = ({ img, accion = "", titulo, info, link }) => {
     const tipoDeA = accion === "descargar" ? "a" : ""
     console.log(tipoDeA)
@@ -31,17 +31,22 @@ const Downloader: FunctionComponent<DownloaderProps> = () => {
       </>
     )
   }
+
+  /*   useEffect(() => {
+    document.body.classList.add("downloader")
+  }, []) */
+
   return (
     <>
       <RutaProtegida>
         <Img
-          src={Qdownloader().bg}
+          src={Qdemo().bg}
           type="bg"
           css="downloader"
           id="downloaderBg"
         >
           <div className="card-container">
-            {Qdownloader().info.map(element => {
+            {Qdemo().info.map(element => {
               return (
                 <Card
                   key={uuidv4()}
@@ -62,4 +67,4 @@ const Downloader: FunctionComponent<DownloaderProps> = () => {
   )
 }
 
-export default Downloader
+export default Demo
