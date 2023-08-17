@@ -11,15 +11,17 @@ const GamePlay: React.FunctionComponent<GamePlayProps> = () => {
     <>
       <RutaProtegida>
         <Img src={Qdemo().bg} type="bg" css="downloader gameplay" id="downloaderBg">
-          {/*  <div style={{width:"400px",height:"400px", position:"relative", overflow:"hidden"}}> */}
+          
           <iframe
             src="https://demovueltarapida.netlify.app/"
-            width="960"
+            /* src="http://127.0.0.1:5500/index.html" */
+           /*  width="960"
             height="642"
+            allowFullScreen */
             scrolling="no"
             frameBorder="1"
           ></iframe>
-          {/* </div> */}
+   
         </Img>
       </RutaProtegida>
     </>
