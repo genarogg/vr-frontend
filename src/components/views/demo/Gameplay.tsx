@@ -15,9 +15,9 @@ const GamePlay: React.FunctionComponent<GamePlayProps> = () => {
           <iframe
             src="https://demovueltarapida.netlify.app/"
             /* src="http://127.0.0.1:5500/index.html" */
-           /*  width="960"
+            width="960"
             height="642"
-            allowFullScreen */
+            allowFullScreen
             scrolling="no"
             frameBorder="1"
           ></iframe>
