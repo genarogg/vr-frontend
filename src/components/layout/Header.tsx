@@ -113,6 +113,12 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             </A>
           </li>
           <li>
+            <A to="https://minteo.vueltarapida.net/" type="a">
+              <Icono css="icon-coins" />
+              minting
+            </A>
+          </li>
+          <li>
             <A to="/nfts">
               <Icono css="icon-ethereum " />
               NFTs

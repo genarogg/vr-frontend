@@ -29,6 +29,28 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
         {headerNofixed ? <div className="headerNoFixed"></div> : null}
         <main id="main" className="main">
           {children}
+      {/*     <a
+            style={{
+              position: "fixed",
+              bottom: "0",
+              right: "0",
+              zIndex: "10000000000",
+
+              width: "104px",
+              height: " 53px",
+              display: "flex",
+              background: "#1e1e1e",
+
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "30px 0 0 0",
+            }}
+            href="https://minteo.vueltarapida.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            mintear
+          </a> */}
         </main>
         <Footer />
       </AuthState>

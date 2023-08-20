@@ -121,3 +121,13 @@
     }
   }
 }
+
+@media screen and (max-width: 860px) {
+.welcome{
+  .container{
+    .gatsby-image-wrapper{
+      max-width: 90vw;
+    }
+  }
+}
+}
