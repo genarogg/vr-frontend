@@ -62,7 +62,7 @@
 
   &,
   * {
-    transition: 600ms ease all;
+    transition: $transicion600msLineal;
   }
   font-family: "Crete Round", sans-serif;
   .contain {

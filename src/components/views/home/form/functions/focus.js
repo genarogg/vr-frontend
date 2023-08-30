@@ -31,6 +31,7 @@ const foco = who => {
 
   if (activo === who) {
     addClass()
+    document.activeElement.focus()
   } else {
     removeClass(who)
   }
