@@ -5,10 +5,10 @@ const { resolve } = require("path")
  */
 module.exports = {
   siteMetadata: {
-    title: `Valkyrie`,
-    description: `Plantilla para crear portafolios`,
+    title: `Vuelta Rápida`,
+    description: `Somos un juego de carreras con tecnología blockchain. Genera ingresos en e-sports. Adrenalina pura. Únete ahora.`,
     author: `@genarogg`,
-    siteUrl: `http://localhost`,
+    siteUrl: `https://vueltarapida.net`,
   },
   plugins: [
     /*  */

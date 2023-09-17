@@ -5,14 +5,14 @@ const Qteam = () => {
     bg,
     imgGenarogg,
     infoGenarogg,
-    imgDurman,
+    /* imgDurman,
     infoDurman,
+    imgLuis,
+    infoLuis, */
     imgJairo,
     infoJairo,
-    imgLuis,
-    infoLuis,
-    imgRicardo,
-    infoRicardo,
+    /* imgRicardo,
+    infoRicardo, */
     imgJuan,
     infoJuan,
   } = useStaticQuery(graphql`
@@ -126,13 +126,13 @@ const Qteam = () => {
     { img: imgGenarogg.sharp, info: infoGenarogg },
    /*  { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     { img: imgJuan.sharp, info: infoJuan },
     /*  */
     { img: imgGenarogg.sharp, info: infoGenarogg },
     /* { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     /* { img: imgLuis.sharp, info: infoLuis }, */
     { img: imgJuan.sharp, info: infoJuan },
   ]

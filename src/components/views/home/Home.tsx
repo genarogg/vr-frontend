@@ -7,6 +7,11 @@ import Welcome from "./Welcome"
 import Layout from "../../layout"
 import Team from "./Team"
 
+//@ts-ignore
+import Seo from "../../nano/Seo"
+
+import Qhome from "../../../consultas/home/Qhome"
+
 interface HomeProps {}
 
 const Home: FunctionComponent<HomeProps> = () => {
@@ -17,6 +22,15 @@ const Home: FunctionComponent<HomeProps> = () => {
 
   return (
     <>
+      {
+        // @ts-ignore
+        <Seo
+          title="Home"
+          img={Qhome().openImg}
+          url="https://vueltarapida.net"
+        />
+      }
+      {console.log(Qhome().openImg)}
       <Layout>
         <Welcome></Welcome>
         <CuentaRegresiva></CuentaRegresiva>

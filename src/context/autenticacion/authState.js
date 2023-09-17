@@ -119,7 +119,7 @@ const AuthState = props => {
   /* cierra la sesion del usuario */
   const cerrarSesion = () => {
    
-    location.reload()
+    /* location.reload() */
     
     dispath({
       type: CERRAR_SESION,

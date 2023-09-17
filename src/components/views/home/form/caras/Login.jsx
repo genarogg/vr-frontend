@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 
-import axios from "axios"
+
 //@ts-ignore
 import Buttons from "./components/Buttons"
 
