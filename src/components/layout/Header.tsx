@@ -44,9 +44,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     $toggle("header", "active")
   }
 
-  const openForm = () => {
+ /*  const openForm = () => {
     $toggle("welcome", "active")
-  }
+  } */
 
   const login = () => {
     return (
@@ -88,11 +88,11 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </>
         ) : (
           <li
-            onClick={() => {
+            /* onClick={() => {
               openForm()
-            }}
+            }} */
           >
-            <A to="/#welcome" css="user">
+            <A to="/login" css="user">
               <Icono css="icon-user" />
               <span className="text">LOGIN</span>
             </A>

@@ -1,38 +1,53 @@
-import React from "react";
+import React, { useState } from "react"
 
-import Icono from "../../../../nano/Icono";
-import A from "../../../../nano/A";
-import $ from "../../../../../functions/$";
+import Icono from "../../../../nano/Icono"
+import A from "../../../../nano/A"
+import $ from "../../../../../functions/$"
 
-import focus from "../functions/focus";
+import focus from "../functions/focus"
+import axios from "axios"
+
+import { BACKEND } from "../../../../../../env"
 
 const ResetPassword = () => {
-  const submit = (e) => {
-    e.preventDefault();
-  };
+  const [mensaje, setMensaje] = useState(
+    "Ingrese el correo con el que se registro, Y se Te enviará un enlace con el que podrá restablecer su contraseña."
+  )
+
+  const reset = e => {
+    e.preventDefault()
+
+    const data = {
+      email: $("resetPassword").value,
+    }
+
+    axios.post(BACKEND + "/email/resetPass", data).then(res => {
+     
+      setMensaje(res.data.message)
+    })
+  }
 
   const voltearIniciar = () => {
-    const tarjeta = $("containerRegisterLogin");
- 
+    const tarjeta = $("containerRegisterLogin")
 
-    $("traseraDerecha").style.display = "none";
+    $("traseraDerecha").style.display = "none"
     if (
       tarjeta.classList.contains("activeRight") ||
       tarjeta.classList.contains("activeLeft")
     ) {
-      tarjeta.classList.remove("activeRight");
+      tarjeta.classList.remove("activeRight")
       if (tarjeta.classList.contains("activeLeft")) {
       }
-      tarjeta.classList.remove("activeLeft");
-      $("buttonBack").classList.remove("active");
+      tarjeta.classList.remove("activeLeft")
+      $("buttonBack").classList.remove("active")
     }
 
-    $("front").classList.add("tarjetaFocus");
+    $("front").classList.add("tarjetaFocus")
 
     setTimeout(() => {
-      $("front").classList.remove("tarjetaFocus");
-    }, 1500);
-  };
+      $("front").classList.remove("tarjetaFocus")
+    }, 1500)
+  }
 
   return (
     <>
@@ -40,7 +55,7 @@ const ResetPassword = () => {
         className="backLeft formGroupSesion resetContainer"
         id="traseraIzq"
         onClick={() => {
-          focus();
+          focus()
         }}
       >
         <div className="title">
@@ -48,7 +63,7 @@ const ResetPassword = () => {
             <button
               className="iniciarSesion"
               onClick={() => {
-                voltearIniciar();
+                voltearIniciar()
               }}
             >
               <A href="#iniciarSesion" css="animationCircle" id="buttonBack">
@@ -70,27 +85,25 @@ const ResetPassword = () => {
               type="email"
               placeholder="Correo electronico"
               onClick={() => {
-                focus();
+                focus()
               }}
+              required
             />
 
             <button
               className="submitEmail"
-              onSubmit={(e) => {
-                submit(e);
+              onClick={e => {
+                reset(e)
               }}
             >
               <span className="ico icon-send"></span>
             </button>
           </div>
-          <p className="aviso">
-            Ingrese el correo con el que se registro, Y se Te enviará un enlace
-            con el que podrá restablecer su contraseña.
-          </p>
+          <p className="aviso">{mensaje}</p>
         </form>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ResetPassword;
+export default ResetPassword

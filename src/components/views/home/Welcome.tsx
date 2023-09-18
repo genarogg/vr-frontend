@@ -8,7 +8,7 @@ import A from "../../nano/A"
 interface WelcomeProps {}
 
 const Welcome: FunctionComponent<WelcomeProps> = () => {
-  const { autenticado } = useContext(AuthContext)
+  const { autenticado, usuario } = useContext(AuthContext)
 
   return (
     <>
@@ -16,8 +16,16 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
         <Img type="bg" src={Qwelcome().bg} css="background">
           <div className="container">
             <Img src={Qwelcome().logo} />
-
-            {autenticado ? <A css="toDemo" to="/demo">demo</A> : <MyForm />}
+            {autenticado && usuario ? (
+              <A css="toDemo" to="/demo">
+                Demo
+              </A>
+            ) : (
+              <A css="toDemo" to="/login">
+                Login
+              </A>
+            )}
+            {/* {autenticado ? <A css="toDemo" to="/demo">demo</A> : <MyForm />} */}
           </div>
         </Img>
       </div>

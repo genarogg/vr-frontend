@@ -1,0 +1,14 @@
+
+
+.containerForm.new-css {
+  margin-top: 120px !important;
+  align-items: center !important;
+  justify-content: center;
+  display: flex;
+  z-index: 1000;
+
+  .tamano {
+    max-height: 750px;
+    min-height: 750px;
+  }
+}

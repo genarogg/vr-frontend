@@ -1,3 +1,9 @@
 @import "./flexboxGrid";
 @import "./normalize";
 @import "./hint";
+@import "./reactToastify";
+
+.Toastify__toast-container--top-right {
+    top: 120px;
+
+}

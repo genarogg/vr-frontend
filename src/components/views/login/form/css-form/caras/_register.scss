@@ -3,7 +3,7 @@
     backface-visibility: hidden;
     background-size: cover;
     position: absolute;
-    top: 0;
+ /*    top: 0; */
     border: 1px solid transparent;
     box-shadow: 0px 0px 5px transparent;
     max-height: 373px;
@@ -16,8 +16,8 @@
   &.activeRight {
     transform: rotateY(180deg);
     .backRight {
-      max-height: 830px;
-      min-height: 830px;
+      max-height: 735px;
+      min-height: 735px;
       transition: $transicion600ms;
     }
     .backLeft {

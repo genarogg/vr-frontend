@@ -2,6 +2,9 @@ import React, { useReducer, useEffect } from "react"
 import authContext from "./authContext"
 import authReducer from "./authReducer"
 import clienteAxios from "../../config/axios"
+
+import { ToastContainer, toast } from "react-toastify"
+
 import {
   REGISTRO_EXITOSO,
   REGISTRO_ERROR,
@@ -22,8 +25,6 @@ const AuthState = props => {
     return " "
   } */
 
-  
-
   const initialState = {
     token: "",
     autenticado: null,
@@ -34,7 +35,7 @@ const AuthState = props => {
   useEffect(() => {
     initialState.token = localStorage.getItem("token")
   }, [])
-  
+
   const [state, dispath] = useReducer(authReducer, initialState)
 
   /* Funciones */
@@ -102,6 +103,18 @@ const AuthState = props => {
       //Obtener el usuario
       usuarioAutenticado(datos)
     } catch (error) {
+
+      toast.error(` ${error.response.data.message}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
+      
       console.log(error.response.data.message)
 
       const alerta = {
@@ -118,9 +131,8 @@ const AuthState = props => {
 
   /* cierra la sesion del usuario */
   const cerrarSesion = () => {
-   
     /* location.reload() */
-    
+
     dispath({
       type: CERRAR_SESION,
     })

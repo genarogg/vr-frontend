@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 
-
 //@ts-ignore
 import Buttons from "./components/Buttons"
 
@@ -19,7 +18,7 @@ import AuthContext from "../../../../../context/autenticacion/authContext"
 
 const Login = () => {
   const authContext = useContext(AuthContext)
-  const { iniciarSesion } = authContext
+  const { iniciarSesion, mensaje } = authContext
 
   const submit = e => {
     e.preventDefault()
@@ -31,9 +30,11 @@ const Login = () => {
       password,
     }
 
-    iniciarSesion(data)
-  }
 
+    iniciarSesion(data)
+  
+  }
+ 
   /* Voltea la tarjeta para recuperar la contraseña */
   const voltearRecuperar = () => {
     const tarjetas = $("containerRegisterLogin")
@@ -96,6 +97,8 @@ const Login = () => {
             </label>
           </div>
 
+      
+
           <div className="buttonContainer">
             <button
               className="login submit"
@@ -124,7 +127,9 @@ const Login = () => {
             </button>
           </div>
         </form>
+       
       </div>
+      
     </>
   )
 }
