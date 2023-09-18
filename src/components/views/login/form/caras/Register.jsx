@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 
 import A from "../../../../nano/A"
-
+import { toast } from "react-toastify"
 import Buttons from "./components/Buttons"
 /* import RedesLogin from "./components/RedesLogin"
 
@@ -12,25 +12,12 @@ import focus from "../functions/focus"
 import check from "../functions/check"
 import Input from "./components/Input"
 
-
-
 import $, { $validarContrasenaDebil } from "../../../../../functions/$"
-
-
 
 import AuthContext from "../../../../../context/autenticacion/authContext"
 
 const Register = () => {
-  const authContext = useContext(AuthContext)
-  const { registrarUsuario } = authContext
-  /* const peticion = (url, data) => {
-    axios
-      .post(url, data)
-      .then(res => {
-        console.log(res)
-      })
-      .catch(async error => console.error("Error:", error))
-  } */
+  const { registrarUsuario } = useContext(AuthContext)
 
   const isValido = () => {
     const validacion = $("validacion")
@@ -40,15 +27,29 @@ const Register = () => {
       validacion.classList.remove("active")
     }, 3000)
   }
+
+  const notificacion = mensaje => {
+    toast.error(mensaje, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
+
   const submit = e => {
     e.preventDefault()
 
-    const nombre = $("registerUserName").value.toLowerCase()
-    const username = $("registerUserSurName").value.toLowerCase()
-    const edad = $("userData").value.toLowerCase()
-    const registerCorreo = $("registerCorreo").value.toLowerCase()
+    const nombre = $("registerUserName").value?.toLowerCase()
+    const username = $("registerUserSurName").value?.toLowerCase()
+    const edad = $("userData").value?.toLowerCase()
+    const registerCorreo = $("registerCorreo").value?.toLowerCase()
 
-    const sex = $("selLabel2").value.toLowerCase()
+    const sex = $("selLabel2").value?.toLowerCase()
     /*  const contry = $("selLabel").innerText */
 
     const contrasena1 = $("registerPassword").value
@@ -64,6 +65,7 @@ const Register = () => {
       contrasena1.trim() === ""
     ) {
       setmensaje("todos los campos son necesarios.")
+      notificacion("todos los campos son necesarios.")
       isValido()
       return
     }
@@ -72,22 +74,26 @@ const Register = () => {
 
     if (contrasena1.length < 8) {
       isValido()
+      notificacion("la contraseña debe ser mayor a 8 caracteres")
       setmensaje("la contraseña debe ser mayor a 8 caracteres")
       return
     }
     if (contrasena1 !== contrasena2) {
+      notificacion("tus contraseñas no coinciden")
       setmensaje("Las contraseñas coinciden.")
       isValido()
       return
     }
 
     if ($validarContrasenaDebil(contrasena1)) {
+      notificacion("La contraseña debe ser alfanumérico")
       setmensaje("La contraseña debe ser alfanumérico")
       isValido()
       return
     }
 
     if (edad <= 0 || edad >= 120) {
+      notificacion("La edad es invalida")
       setmensaje("La edad es invalida")
       isValido()
       return
@@ -107,7 +113,6 @@ const Register = () => {
 
     console.log(data)
 
-    /* peticion(`${BACKEND}/user/register`, data) */
     registrarUsuario(data)
   }
 

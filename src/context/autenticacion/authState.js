@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from "react"
 import authContext from "./authContext"
 import authReducer from "./authReducer"
 import clienteAxios from "../../config/axios"
-import { navigate } from 'gatsby';
+import { navigate } from "gatsby"
 import { toast } from "react-toastify"
 
 import {
@@ -32,6 +32,20 @@ const AuthState = props => {
     mensaje: null,
     cargando: true,
   }
+
+  const notificacion = mensaje => {
+    toast.error(mensaje, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
+
   useEffect(() => {
     initialState.token = localStorage.getItem("token")
   }, [])
@@ -54,6 +68,7 @@ const AuthState = props => {
     } catch (error) {
       console.log(error)
 
+      notificacion(error.response.data.message)
       const alerta = {
         msg: error.response.data.msg,
         categoria: "alerta-error",
@@ -104,19 +119,9 @@ const AuthState = props => {
       usuarioAutenticado(datos)
 
       //redirect
-      navigate('/');
-
+      navigate("/")
     } catch (error) {
-      toast.error(` ${error.response.data.message}`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      })
+      notificacion(error.response.data.message)
 
       console.log(error.response.data.message)
 
