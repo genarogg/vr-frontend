@@ -3,7 +3,7 @@ import authContext from "./authContext"
 import authReducer from "./authReducer"
 import clienteAxios from "../../config/axios"
 
-import { ToastContainer, toast } from "react-toastify"
+import { toast } from "react-toastify"
 
 import {
   REGISTRO_EXITOSO,
@@ -103,7 +103,6 @@ const AuthState = props => {
       //Obtener el usuario
       usuarioAutenticado(datos)
     } catch (error) {
-
       toast.error(` ${error.response.data.message}`, {
         position: "top-right",
         autoClose: 5000,
@@ -114,7 +113,7 @@ const AuthState = props => {
         progress: undefined,
         theme: "dark",
       })
-      
+
       console.log(error.response.data.message)
 
       const alerta = {

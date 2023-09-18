@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import Icono from "../../../../nano/Icono"
 import A from "../../../../nano/A"
@@ -8,22 +8,42 @@ import focus from "../functions/focus"
 import axios from "axios"
 
 import { BACKEND } from "../../../../../../env"
-
+import { toast } from "react-toastify"
 const ResetPassword = () => {
-  const [mensaje, setMensaje] = useState(
-    "Ingrese el correo con el que se registro, Y se Te enviará un enlace con el que podrá restablecer su contraseña."
-  )
-
   const reset = e => {
     e.preventDefault()
 
+    const email = $("resetPassword").value
+
+    if (email.trim() === "") {
+      toast.error(`Ingrese un correo`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
+      return
+    }
+
     const data = {
-      email: $("resetPassword").value,
+      email,
     }
 
     axios.post(BACKEND + "/email/resetPass", data).then(res => {
-     
-      setMensaje(res.data.message)
+      toast.success(` ${res.data.message}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
     })
   }
 
@@ -99,7 +119,10 @@ const ResetPassword = () => {
               <span className="ico icon-send"></span>
             </button>
           </div>
-          <p className="aviso">{mensaje}</p>
+          <p className="aviso">
+            Ingrese el correo con el que se registro, Y se Te enviará un enlace
+            con el que podrá restablecer su contraseña.
+          </p>
         </form>
       </div>
     </>

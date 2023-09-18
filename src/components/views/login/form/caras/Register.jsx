@@ -16,7 +16,7 @@ import Input from "./components/Input"
 
 import $, { $validarContrasenaDebil } from "../../../../../functions/$"
 
-/* const { BACKEND } = process.env.config() */
+
 
 import AuthContext from "../../../../../context/autenticacion/authContext"
 
