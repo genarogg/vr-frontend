@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import Img from "../nano/Img"
-import { $contain } from "../views/home/form/functions/$"
+
 
 export interface spinnerLoaderProps {
   type?: string

@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from "react"
 import authContext from "./authContext"
 import authReducer from "./authReducer"
 import clienteAxios from "../../config/axios"
-
+import { navigate } from 'gatsby';
 import { toast } from "react-toastify"
 
 import {
@@ -102,6 +102,10 @@ const AuthState = props => {
 
       //Obtener el usuario
       usuarioAutenticado(datos)
+
+      //redirect
+      navigate('/');
+
     } catch (error) {
       toast.error(` ${error.response.data.message}`, {
         position: "top-right",
