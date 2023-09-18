@@ -1,7 +1,7 @@
 import React, { useContext, FunctionComponent } from "react"
 import Qwelcome from "../../../consultas/home/Qwelcome"
 import Img from "../../nano/Img"
-import MyForm from "./form/MyForm"
+
 import AuthContext from "../../../context/autenticacion/authContext"
 import A from "../../nano/A"
 
@@ -25,7 +25,6 @@ const Welcome: FunctionComponent<WelcomeProps> = () => {
                 Login
               </A>
             )}
-            {/* {autenticado ? <A css="toDemo" to="/demo">demo</A> : <MyForm />} */}
           </div>
         </Img>
       </div>
