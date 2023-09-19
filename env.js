@@ -1,4 +1,8 @@
-/* const BACKEND = "http://localhost:3000/api" */
-/* const BACKEND= "https://backend.vueltarapida.net/api" */
-const BACKEND= "https://vr-backend-k0xy.onrender.com/api"
+/* const BACKEND_LOCAL = "http://localhost:3000/api" */
+/* const BACKEND_CON_DOMINIO = "https://backend.vueltarapida.net/api" */
+/* const BACKEND_CANONICO = "https://vr-backend-k0xy.onrender.com/api"; */
+const BACKEND_PAGO = "https://vr-backend2.onrender.com/api"
+
+const BACKEND = BACKEND_PAGO
+
 export { BACKEND }
