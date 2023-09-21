@@ -71,6 +71,17 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
 
     axios.post(`${BACKEND}/email/newpass`, data).then(res => {
       iniciarSesion({ email: res.data.userEmail, password: data.password })
+
+      toast.success(` ${res.data.message}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
     })
   }
 

@@ -7,6 +7,9 @@ import Footer from "./Footer"
 import SpinnerLoader from "./SpinnerLoader"
 import Qwelcome from "../../consultas/home/Qwelcome"
 import AuthState from "../../context/autenticacion/authState"
+
+import { ToastContainer } from "react-toastify"
+
 interface LayoutProps {
   children?: any
   headerNofixed?: boolean
@@ -52,6 +55,18 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
             mintear
           </a> */}
         </main>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <Footer />
       </AuthState>
     </>
