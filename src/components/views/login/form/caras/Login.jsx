@@ -30,11 +30,9 @@ const Login = () => {
       password,
     }
 
-
     iniciarSesion(data)
-  
   }
- 
+
   /* Voltea la tarjeta para recuperar la contraseña */
   const voltearRecuperar = () => {
     const tarjetas = $("containerRegisterLogin")
@@ -97,8 +95,6 @@ const Login = () => {
             </label>
           </div>
 
-      
-
           <div className="buttonContainer">
             <button
               className="login submit"
@@ -127,9 +123,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-       
       </div>
-      
     </>
   )
 }

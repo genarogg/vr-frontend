@@ -3,7 +3,7 @@ import React from "react"
 import Login from "./caras/Login"
 import Register from "./caras/Register"
 import ResetPassword from "./caras/ResetPassword"
-import { ToastContainer, toast } from "react-toastify"
+import { ToastContainer } from "react-toastify"
 
 import "./css-form/index.scss"
 

@@ -1,0 +1,128 @@
+import React, { FunctionComponent } from "react"
+import axios from "axios"
+import $ from "../../../functions/$"
+//@ts-ignore
+/* import RedesLogin from "./components/RedesLogin" */
+//@ts-ignore
+import check from "../login/form/functions/check"
+//@ts-ignore
+import Input from "../login/form/caras/components/Input"
+//@ts-ignore
+import focus from "../login/form/functions/focus"
+
+//@ts-ignore
+import Seo from "../../nano/Seo"
+
+import QLogin from "../../../consultas/login/QLogin.js"
+
+import Img from "../../nano/Img"
+import { toast } from "react-toastify"
+
+interface NewPasswordProps {}
+
+const NewPassword: FunctionComponent<NewPasswordProps> = () => {
+  const notificacion = mensaje => {
+    toast.error(mensaje, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
+
+  const resetPass = e => {
+    e.preventDefault()
+
+    const token =
+      typeof window !== "undefined"
+        ? window.location.pathname.split("/#").pop()
+        : null
+    console.log(token)
+    //@ts-ignore
+    const newPass = $("newPass").value
+    //@ts-ignore
+    const newPassRepited = $("newPassRepited").value
+
+    if (newPass === "" || newPassRepited === "") {
+      notificacion("todos los campos son necesarios.")
+      return
+    }
+
+    if (newPass.length < 8) {
+      notificacion("la contraseña debe ser mayor a 8 caracteres")
+      return
+    }
+
+    if (newPass !== newPassRepited) {
+      notificacion("tus contraseñas no coinciden")
+      return
+    }
+
+    const data = {
+      newPass,
+      newPassRepited,
+    }
+
+    /* iniciarSesion(data) */
+
+    console.log(data)
+  }
+
+  return (
+    <>
+      {
+        // @ts-ignore
+        <Seo title="Login" url="https://vueltarapida.net/login" />
+      }
+      <Img type="bg" src={QLogin().bgLogin}>
+        <>
+          <div
+            className="front formGroupSesion newPass"
+            id="front"
+            onClick={() => {
+              focus()
+            }}
+          >
+            <form>
+              <Input
+                type="password"
+                id="newPass"
+                placeholder="Nueva contraseña"
+                icono="icon-lock"
+                next="loginPassword"
+              />
+              <Input
+                type="password"
+                id="newPassRepited"
+                placeholder="Repetir Contraseña"
+                icono="icon-lock"
+                next="resetButtons"
+              />
+
+              <div className="buttonContainer">
+                <button
+                  className="login submit"
+                  name="resetButtons"
+                  id="resetButtons"
+                  value="send"
+                  onClick={e => {
+                    check("login")
+                    resetPass(e)
+                  }}
+                >
+                  Acceder
+                </button>
+              </div>
+            </form>
+          </div>
+        </>
+      </Img>
+    </>
+  )
+}
+
+export default NewPassword

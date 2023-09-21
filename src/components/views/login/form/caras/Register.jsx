@@ -60,9 +60,9 @@ const Register = () => {
       username.trim() === "" ||
       edad.trim() === "" ||
       registerCorreo.trim() === "" ||
-      sex.trim() === "" ||
+      sex.trim() === "" /* || */
       /*    contry.trim() === "" || */
-      contrasena1.trim() === ""
+      /* contrasena1.trim() === "" */
     ) {
       setmensaje("todos los campos son necesarios.")
       notificacion("todos los campos son necesarios.")
@@ -70,7 +70,7 @@ const Register = () => {
       return
     }
 
-    console.log()
+
 
     if (contrasena1.length < 8) {
       isValido()
