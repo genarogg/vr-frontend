@@ -3,6 +3,6 @@
 /* const BACKEND_SIN_DOMINIO = "https://vr-backend-k0xy.onrender.com/api"; */
 const BACKEND_PAGO = "https://vr-backend2.onrender.com/api"
 
-const BACKEND = BACKEND_LOCAL || BACKEND_PAGO || BACKEND_SIN_DOMINIO || BACKEND_CON_DOMINIO
+const BACKEND = BACKEND_PAGO 
 
 export { BACKEND }
