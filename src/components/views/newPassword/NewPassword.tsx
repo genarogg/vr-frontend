@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react"
 import axios from "axios"
-import $ from "../../../functions/$"
+import $, { $parametrosUrl } from "../../../functions/$"
 //@ts-ignore
 /* import RedesLogin from "./components/RedesLogin" */
 //@ts-ignore
@@ -17,6 +17,7 @@ import QLogin from "../../../consultas/login/QLogin.js"
 
 import Img from "../../nano/Img"
 import { toast } from "react-toastify"
+import { BACKEND } from "../../../../env"
 
 interface NewPasswordProps {}
 
@@ -37,11 +38,8 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
   const resetPass = e => {
     e.preventDefault()
 
-    const token =
-      typeof window !== "undefined"
-        ? window.location.pathname.split("/#").pop()
-        : null
-    console.log(token)
+    const token = $parametrosUrl("token")
+
     //@ts-ignore
     const newPass = $("newPass").value
     //@ts-ignore
@@ -63,10 +61,13 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
     }
 
     const data = {
-      newPass,
-      newPassRepited,
+      password: newPass,
+      token,
     }
 
+    axios.post(`${BACKEND}/email/newpass`).then(res => {
+      console.log(res)
+    })
     /* iniciarSesion(data) */
 
     console.log(data)

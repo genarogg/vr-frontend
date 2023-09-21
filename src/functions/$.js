@@ -47,13 +47,13 @@ const $fadeOut = getId => {
   const id = $(getId)
 
   id.style.opacity = 1
-  ;(function fade() {
-    if ((id.style.opacity -= 0.1) < 0) {
-      id.style.display = "none"
-    } else {
-      requestAnimationFrame(fade)
-    }
-  })()
+    ; (function fade() {
+      if ((id.style.opacity -= 0.1) < 0) {
+        id.style.display = "none"
+      } else {
+        requestAnimationFrame(fade)
+      }
+    })()
 }
 
 /* Mostrar un elemento del dom */
@@ -61,13 +61,13 @@ const $fadeIn = (getId, display) => {
   const id = $(getId)
   id.style.opacity = 0
   id.style.display = display || "block"
-  ;(function fade() {
-    var val = parseFloat(id.style.opacity)
-    if (!((val += 0.1) > 1)) {
-      id.style.opacity = val
-      requestAnimationFrame(fade)
-    }
-  })()
+    ; (function fade() {
+      var val = parseFloat(id.style.opacity)
+      if (!((val += 0.1) > 1)) {
+        id.style.opacity = val
+        requestAnimationFrame(fade)
+      }
+    })()
 }
 /* Oculta el elemento si es visibe y lo muestra si es invisibl */
 const $toogleFade = (id, display = "block") => {
@@ -168,6 +168,19 @@ const $moveComponent = (event, id) => {
   element.style.transform = `translate(${translateX}px, ${translateY}px)`
 }
 
+const $parametrosUrl = (consulta) => {
+  // Obtener la URL completa
+  const urlCompleta = window.location.href
+
+  // Crear un objeto URL
+  const url = new URL(urlCompleta);
+
+  // Obtener el valor del parámetro 
+  const parametro = url.searchParams.get(consulta);
+
+  return parametro;
+}
+
 export {
   $alternalClass,
   $fadeOut,
@@ -186,6 +199,7 @@ export {
   $quitarAcentos,
   $validarContrasenaDebil,
   $moveComponent,
+  $parametrosUrl
 }
 
 /* interface $Props {
