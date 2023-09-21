@@ -17,8 +17,7 @@ import focus from "../functions/focus"
 import AuthContext from "../../../../../context/autenticacion/authContext"
 
 const Login = () => {
-  const authContext = useContext(AuthContext)
-  const { iniciarSesion, mensaje } = authContext
+  const { iniciarSesion } = useContext(AuthContext)
 
   const submit = e => {
     e.preventDefault()

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useContext } from "react"
 import axios from "axios"
 import $, { $parametrosUrl } from "../../../functions/$"
 //@ts-ignore
@@ -19,9 +19,13 @@ import Img from "../../nano/Img"
 import { toast } from "react-toastify"
 import { BACKEND } from "../../../../env"
 
+import AuthContext from "../../../context/autenticacion/authContext"
+
 interface NewPasswordProps {}
 
 const NewPassword: FunctionComponent<NewPasswordProps> = () => {
+  const { iniciarSesion } = useContext(AuthContext)
+
   const notificacion = mensaje => {
     toast.error(mensaje, {
       position: "top-right",
@@ -65,12 +69,9 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
       token,
     }
 
-    axios.post(`${BACKEND}/email/newpass`).then(res => {
-      console.log(res)
+    axios.post(`${BACKEND}/email/newpass`, data).then(res => {
+      iniciarSesion({ email: res.data.userEmail, password: data.password })
     })
-    /* iniciarSesion(data) */
-
-    console.log(data)
   }
 
   return (
