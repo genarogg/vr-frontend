@@ -8,7 +8,7 @@ interface newPassProps {}
 const newPass: React.FunctionComponent<newPassProps> = () => {
   return (
     <>
-      <Layout>
+      <Layout where="new-password">
         <NewPassword />
       </Layout>
     </>

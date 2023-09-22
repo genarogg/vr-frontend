@@ -70,8 +70,6 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
     }
 
     axios.post(`${BACKEND}/email/newpass`, data).then(res => {
-      iniciarSesion({ email: res.data.userEmail, password: data.password })
-
       toast.success(` ${res.data.message}`, {
         position: "top-right",
         autoClose: 5000,
@@ -82,6 +80,8 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
         progress: undefined,
         theme: "dark",
       })
+
+      iniciarSesion({ email: res.data.userEmail, password: data.password })
     })
   }
 
@@ -112,7 +112,7 @@ const NewPassword: FunctionComponent<NewPasswordProps> = () => {
                 type="password"
                 id="newPassRepited"
                 placeholder="Repetir Contraseña"
-                icono="icon-lock"
+                icono="icon-lock-2"
                 next="resetButtons"
               />
 
