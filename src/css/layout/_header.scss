@@ -11,18 +11,12 @@
   display: grid;
   grid-template-columns: 1fr 6fr;
 
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 130%;
   align-self: center;
   top: 5px;
   width: 99%;
   display: flex;
-
-  backdrop-filter: blur(28px);
   border-radius: 15px;
-
-  background-color: rgb(11 11 14);
+  @include layoutColor(130%);
 
   &,
   * {
@@ -290,8 +284,7 @@
 
       clip-path: polygon(0 0, 0% 100%, 100% 0);
       height: 100vh;
-      background-color: rgba($colorButton, 0.4);
-      backdrop-filter: blur(20px);
+
       justify-content: left;
 
       @include layoutColor(500%);
