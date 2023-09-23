@@ -3,3 +3,14 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin layoutColor($bgSize: initial, $transparencia: 0.5) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: $bgSize;
+  background-color: rgba(11, 11, 14, $transparencia);
+  backdrop-filter: blur(28px);
+}
+
+

@@ -1,3 +1,5 @@
+@import '../../../../../css/general/mixin';
+
 .validacion {
   transition: $transicion600ms;
   display: flex;
@@ -41,18 +43,11 @@
 }
 
 .formGroupSesion {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 130%;
-  /* align-self: center; */
-  /* top: 5px; */
+  @include layoutColor(130%);
+
   width: 99%;
-  display: flex;
-  -webkit-backdrop-filter: blur(28px);
-  backdrop-filter: blur(28px);
   border-radius: 15px;
-  background-color: rgb(11, 11, 14);
+  display: flex;
 
   form .containerInput,
   .dropdown-list li,
@@ -62,5 +57,6 @@
   }
 }
 
-.formGroupSesion button.submit:hover{
-  background-color: rgb(41, 41, 41) !important;}
+.formGroupSesion button.submit:hover {
+  background-color: rgb(41, 41, 41) !important;
+}
