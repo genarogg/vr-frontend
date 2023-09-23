@@ -243,15 +243,13 @@
           z-index: -100;
           opacity: 1;
           position: absolute;
-          background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
-          background-position: bottom center;
-          background-repeat: no-repeat;
-          background-size: 264%;
+
+          @include layoutColor(265%);
+
           align-self: center;
           top: 60px;
           display: flex;
-          background-color: rgb(11, 11, 14);
-          -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+
           clip-path: polygon(0 0, 100% 100%, 100% 0);
           height: 280px;
           width: 230px;
@@ -296,12 +294,8 @@
       backdrop-filter: blur(20px);
       justify-content: left;
 
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
+      @include layoutColor(500%);
 
-      background-position: bottom center;
-      background-repeat: no-repeat;
-      background-size: 500%;
-      background-color: rgb(11, 11, 14);
       &.active {
         left: 0;
       }
