@@ -13,8 +13,7 @@ const GamePlay: React.FunctionComponent<GamePlayProps> = () => {
         <Img src={Qdemo().bg} type="bg" css="downloader gameplay" id="downloaderBg">
           
           <iframe
-            src="https://demovueltarapida.netlify.app/"
-            /* src="http://127.0.0.1:5500/index.html" */
+            src="https://demo.vueltarapida.net"
             width="960"
             height="642"
             allowFullScreen
