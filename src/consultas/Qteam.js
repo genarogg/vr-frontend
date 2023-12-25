@@ -123,28 +123,28 @@ const Qteam = () => {
   `)
 
   const team = [
-    /* { img: imgGenarogg.sharp, info: infoGenarogg }, */
+    { img: imgGenarogg.sharp, info: infoGenarogg },
     /* { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     { img: imgJuan.sharp, info: infoJuan },
     /*  */
-    /* { img: imgGenarogg.sharp, info: infoGenarogg }, */
+    { img: imgGenarogg.sharp, info: infoGenarogg },
     /* { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     /* { img: imgLuis.sharp, info: infoLuis }, */
     { img: imgJuan.sharp, info: infoJuan },
-    /* { img: imgGenarogg.sharp, info: infoGenarogg }, */
+    { img: imgGenarogg.sharp, info: infoGenarogg },
     /* { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     { img: imgJuan.sharp, info: infoJuan },
     /*  */
-    /* { img: imgGenarogg.sharp, info: infoGenarogg }, */
+    { img: imgGenarogg.sharp, info: infoGenarogg },
     /* { img: imgDurman.sharp, info: infoDurman }, */
     { img: imgJairo.sharp, info: infoJairo },
-    { img: imgRicardo.sharp, info: infoRicardo },
+    /* { img: imgRicardo.sharp, info: infoRicardo }, */
     /* { img: imgLuis.sharp, info: infoLuis }, */
     { img: imgJuan.sharp, info: infoJuan },
     
